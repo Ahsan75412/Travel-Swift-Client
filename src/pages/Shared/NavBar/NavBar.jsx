@@ -3,7 +3,7 @@ const NavBar = () => {
 
     const navOptions = <>
 
-        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-black rounded-box w-52">
             <li><a>Home</a></li>
             {/* <li>
                 <a>Parent</a>
@@ -12,7 +12,7 @@ const NavBar = () => {
                     <li><a>Submenu 2</a></li>
                 </ul>
             </li> */}
-            <li><a>Item 3</a></li>
+            <li><a>Hotels</a></li>
             <li><a>Item 3</a></li>
             <li><a>Item 3</a></li>
 
@@ -23,7 +23,7 @@ const NavBar = () => {
     </>
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const NavBar = () => {
                                 </ul>
                             </details>
                         </li> */}
-                        <li><a>Item 3</a></li>
+                        <li><a>Hotels</a></li>
                         <li><a>Item 3</a></li>
                         <li><a>Item 3</a></li>
                     </ul>
@@ -83,3 +83,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
