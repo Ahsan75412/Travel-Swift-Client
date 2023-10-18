@@ -1,0 +1,90 @@
+[
+    {
+        "_id": "1",
+        "name": "Sea Pearl Beach Resort & Spa Cox's Bazar",
+        "location": "Cox's Bazar",
+        "image": "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562151/populer%20hotels/vw5t7wwqaayfv6dhfbap.jpg",
+        "hotel_img" : "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562169/populer%20hotels/fbn7ehcrf2eekomofkms.jpg",
+        "rating": "*****",
+        "phone": "+880- 0178822421",
+        "description": "Indulge in the comfort of our Deluxe Rooms, featuring modern amenities and stunning views of the surrounding mountains. Each room is elegantly furnished to ensure a relaxing stay.",
+        "category": "popular",
+        "price": 450
+    },
+    {
+        "_id": "2",
+        "name": "Grand Sylhet Hotel & Resort",
+        "location": "Sylhet",
+        "image": "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562176/populer%20hotels/k89eu4j3fyzivkkdjsqn.jpg",
+        "hotel_img" : "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562168/populer%20hotels/yorp0kkjze3s7pstb7w8.jpg",
+        "phone": "+880- 0178822421",
+        "rating": "*****",
+        "description": "Experience unparalleled luxury in our Executive Suites, offering spacious living areas, a private balcony, and personalized concierge service. Perfect for those seeking a truly indulgent getaway.",
+        "category": "popular",
+        "price": 240
+    },
+    {
+        "_id": "3",
+        "name": "Lakeshore Banani",
+        "phone": "+880- 0178822421",
+        "location": "Dhaka",
+        "image": "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562169/populer%20hotels/egnkfepvtba61teidjeb.jpg", 
+        "hotel_img" : "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562177/populer%20hotels/unnx5gk9qx1tt8giduiv.jpg",
+        "rating": "****",
+        "category": "popular",
+        "description": "Experience luxury and comfort at Grand View Hotel, where hospitality meets breathtaking views. Nestled in the heart of Nature Valley, our hotel offers a serene retreat for those seeking relaxation and adventure alike.",
+        "price": 100
+    },
+    {
+        "_id": "4",
+        "name": "Ocean Paradise Hotel & Resort",
+        "location": "Cox's Bazar",
+        "phone": "+880- 0178822421",
+        "image": "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562182/populer%20hotels/wo4yoolmbthzgqgmyhc6.jpg", 
+        "hotel_img" : "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562174/populer%20hotels/pce9bkzeettmssaqr24m.jpg",
+        "rating": "****",
+        "description": "Escape to Oceanfront Paradise Resort, where the soothing sound of waves meets luxurious accommodations. Located on the pristine beaches of Azure Bay, our resort offers a perfect blend of relaxation and seaside adventure.",
+        "category": "popular",
+        "price": 140
+    },
+    {
+        "_id": "5",
+        "name": "Hotel Tropical Daisy",
+        "location": "Khulna",
+        "phone": "+880- 0178822421",
+        "image": "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562168/populer%20hotels/yz7bmdyly053x8muq679.jpg",
+        
+        "hotel_img" : "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562176/populer%20hotels/y9xfmx3ttc8ud1ncjwwp.jpg",
+        "rating": "*****",
+        "description": "Upgrade to a Mountain Suite for extra space and a private balcony with panoramic views of the majestic peaks.",
+        "category": "Medium",
+        "price": 140
+    },
+    {
+        "_id": "6",
+        "name": "Hotel Noorjahan Grand",
+        "location": "Rajshahi",
+        "phone": "+880- 0178822421",
+        "image": "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562164/populer%20hotels/yxgaahqrgmvyunqeg2n1.jpg",
+        
+        "hotel_img" : "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562165/populer%20hotels/ezl4me6pciqqctgalul5.jpg",
+        "rating": "*****",
+        "description": "Our comfortable Standard Rooms are perfect for those seeking a quiet retreat after a day of exploring the surrounding hiking trails.",
+        "category": "popular",
+        "price": 140
+    },
+    {
+        "_id": "7",
+        "name": "Ascott Palace Dhaka",
+        "phone": "+880- 0178822421",
+        "location": "Dhaka City",
+        "image": "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562161/populer%20hotels/qzfjvuriovseznuyi9mh.jpg",
+        
+        "hotel_img" : "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562177/populer%20hotels/unnx5gk9qx1tt8giduiv.jpg",
+        "rating": "*****",
+        "description": "Discover serenity in the heart of the mountains at Mountain Retreat Lodge. Surrounded by lush forests and stunning peaks, our lodge provides a cozy and peaceful escape for nature enthusiasts.",
+        "category": "Medium",
+        "price": 140
+    }
+
+]
