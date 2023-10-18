@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import SingleHotel from '../../Shared/singleHotel/SingleHotel';
 
-const FeaturedHotels = () => {
+const PopularHotels = () => {
     const [hotel , setHotel] = useState([]);
   
     useEffect(() => {
@@ -16,7 +16,7 @@ const FeaturedHotels = () => {
     return (
         <section>
             <SectionTitle
-              heading={"Featured Hotels Deals"}
+              heading={"Popular Hotels Deals"}
               subHeading={"Everything You Want & More"}
             ></SectionTitle>
 
@@ -34,4 +34,4 @@ const FeaturedHotels = () => {
     );
 };
 
-export default FeaturedHotels;
+export default PopularHotels;

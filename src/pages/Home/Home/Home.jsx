@@ -1,13 +1,16 @@
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
-import FeaturedHotels from "../FeaturedHotels/FeaturedHotels";
+import Featured from "../Featured/Featured";
+import PopularHotels from "../PopularHotels/PopularHotels";
+
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <Category></Category>
-            <FeaturedHotels></FeaturedHotels>
+            <PopularHotels></PopularHotels>
+            <Featured></Featured>
         </div>
     );
 };
