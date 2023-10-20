@@ -1,22 +1,16 @@
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
     const navOptions = <>
 
-        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-black rounded-box w-52">
-            <li><a>Home</a></li>
-            {/* <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                </ul>
-            </li> */}
-            <li><a>Hotels</a></li>
-            <li><a>Item 3</a></li>
-            <li><a>Item 3</a></li>
+        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-white bg-slate-600 rounded-box w-52">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/hotels">Hotels</Link></li>
+            <li><Link to="/packages">Packages</Link></li>
 
-       
+
+
         </ul>
 
 
@@ -38,19 +32,9 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        {/* <li tabIndex={0}>
-                            <details>
-                                <summary>Parent</summary>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </details>
-                        </li> */}
-                        <li><a>Hotels</a></li>
-                        <li><a>Item 3</a></li>
-                        <li><a>Item 3</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/hotels">Hotels</Link></li>
+                        <li><Link to="/hotels">Hotels</Link></li>
                     </ul>
                 </div>
 

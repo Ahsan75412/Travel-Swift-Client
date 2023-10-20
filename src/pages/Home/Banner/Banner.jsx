@@ -16,7 +16,7 @@ const Banner = () => {
 
             <div className="hero-content flex-col lg:flex-row-reverse  ">
                 {/* <VideoBackground></VideoBackground> --lg:w-[1200px] */}
-                <div className="border-2">
+                <div className="npm">
                     <VideoBackground></VideoBackground>
                 </div>
 

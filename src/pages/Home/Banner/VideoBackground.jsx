@@ -20,7 +20,7 @@ const VideoBackground = () => {
     <div className="App">
       <div>
         <video
-          style={{ maxWidth: "100%", width: "800px", margin: "0 auto" }}
+          style={{ maxWidth: "100%", width: "800px", margin: "0 auto",borderRadius:"20px" }}
           playsInline
           loop
           muted

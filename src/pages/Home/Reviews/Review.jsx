@@ -32,7 +32,7 @@ const Review = () => {
                 heading="Reviews"
             ></SectionTitle>
 
-            <Swiper navigation={true} modules={[Navigation]} className="mySwiper ">
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper mb-10">
 
 
                 {
