@@ -9,6 +9,7 @@
         "phone": "+880- 0178822421",
         "description": "Indulge in the comfort of our Deluxe Rooms, featuring modern amenities and stunning views of the surrounding mountains. Each room is elegantly furnished to ensure a relaxing stay.",
         "category": "popular",
+        "availableRooms": "4",
         "price": 450
     },
     {
@@ -21,6 +22,7 @@
         "rating": "*****",
         "description": "Experience unparalleled luxury in our Executive Suites, offering spacious living areas, a private balcony, and personalized concierge service. Perfect for those seeking a truly indulgent getaway.",
         "category": "popular",
+        "availableRooms": "2",
         "price": 240
     },
     {
@@ -32,6 +34,7 @@
         "hotel_img" : "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562177/populer%20hotels/unnx5gk9qx1tt8giduiv.jpg",
         "rating": "****",
         "category": "popular",
+        "availableRooms": "3",
         "description": "Experience luxury and comfort at Grand View Hotel, where hospitality meets breathtaking views. Nestled in the heart of Nature Valley, our hotel offers a serene retreat for those seeking relaxation and adventure alike.",
         "price": 100
     },
@@ -45,6 +48,7 @@
         "rating": "****",
         "description": "Escape to Oceanfront Paradise Resort, where the soothing sound of waves meets luxurious accommodations. Located on the pristine beaches of Azure Bay, our resort offers a perfect blend of relaxation and seaside adventure.",
         "category": "popular",
+        "availableRooms": "1",
         "price": 140
     },
     {
@@ -58,6 +62,7 @@
         "rating": "*****",
         "description": "Upgrade to a Mountain Suite for extra space and a private balcony with panoramic views of the majestic peaks.",
         "category": "Medium",
+        "availableRooms": "5",
         "price": 140
     },
     {
@@ -71,6 +76,7 @@
         "rating": "*****",
         "description": "Our comfortable Standard Rooms are perfect for those seeking a quiet retreat after a day of exploring the surrounding hiking trails.",
         "category": "popular",
+        "availableRooms": "8",
         "price": 140
     },
     {
@@ -84,6 +90,7 @@
         "rating": "*****",
         "description": "Discover serenity in the heart of the mountains at Mountain Retreat Lodge. Surrounded by lush forests and stunning peaks, our lodge provides a cozy and peaceful escape for nature enthusiasts.",
         "category": "Medium",
+        "availableRooms": "4",
         "price": 140
     }
 

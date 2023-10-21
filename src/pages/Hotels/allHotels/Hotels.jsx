@@ -12,6 +12,7 @@ const Hotels = () => {
             </Helmet>
             <Cover img={hotelImg} title="Book hotel"></Cover>
             <h2>all Hotels</h2>
+        
         </div>
     );
 };
