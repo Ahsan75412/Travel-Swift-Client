@@ -4,6 +4,7 @@ import Category from "../Category/Category";
 import Featured from "../Featured/Featured";
 import PopularHotels from "../PopularHotels/PopularHotels";
 import Review from "../Reviews/Review";
+import Hotels from "../Hotels/Hotels";
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             <Category></Category>
             <PopularHotels></PopularHotels>
             <Featured></Featured>
+            <Hotels></Hotels>
             <Review></Review>
         </div>
     );

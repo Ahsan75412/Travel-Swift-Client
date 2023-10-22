@@ -61,7 +61,7 @@
         "hotel_img" : "https://res.cloudinary.com/dg5xbio2w/image/upload/v1697562176/populer%20hotels/y9xfmx3ttc8ud1ncjwwp.jpg",
         "rating": "*****",
         "description": "Upgrade to a Mountain Suite for extra space and a private balcony with panoramic views of the majestic peaks.",
-        "category": "Medium",
+        "category": "popular",
         "availableRooms": "5",
         "price": 140
     },

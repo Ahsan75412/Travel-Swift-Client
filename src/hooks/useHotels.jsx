@@ -6,7 +6,7 @@ const useHotels = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('hotels.json')
+        fetch('http://localhost:5000/hotels')
             .then(res => res.json())
             .then(data => {
                 setHotel(data);

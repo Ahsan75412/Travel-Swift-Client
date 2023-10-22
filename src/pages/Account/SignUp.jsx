@@ -11,6 +11,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Loading from "../Shared/Loading/Loading";
 import auth from "../../firebaseConfig";
 
+
+
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] =
         useSignInWithGoogle(auth);
