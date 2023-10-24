@@ -7,6 +7,9 @@ import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Account/Login";
 import SignUp from "../pages/Account/SignUp";
 import Hotels from "../pages/Home/Hotels/Hotels";
+import HotelDetails from "../pages/HotelDetails/HotelDetails";
+import Hotel from "../pages/Hotel/Hotel";
+
 
 
   
@@ -19,9 +22,17 @@ export const router = createBrowserRouter([
             path: "/",
             element: <Home></Home>,
         },
+        // {
+        //     path: "",
+        //     element: <Hotels></Hotels>,
+        // },
         {
             path: "hotels",
-            element: <Hotels></Hotels>,
+            element: <Hotel></Hotel>,
+        },
+        {
+            path: "hotel/:hotelId",
+            element: <HotelDetails></HotelDetails>,
         },
         {
             path: "login",

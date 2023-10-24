@@ -29,18 +29,19 @@ const Hotels = () => {
     }
 
     return (
-        <Helmet>
-            <title>Travel-Swift | Hotels</title>
-        </Helmet> &&
-        <div>
 
+        <div>
+            <Helmet>
+                <title>Travel-Swift | Home</title>
+            </Helmet>
+{/* 
             {
                 location.pathname === "/hotels" ? (
                     <SemiCover></SemiCover>
                 ) : (
                     <></>
                 )
-            }
+            } */}
 
             {location.pathname === "/" ? (
                 <div className="flex justify-between py-20 flex-col lg:flex-row px-20">

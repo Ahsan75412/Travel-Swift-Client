@@ -2,11 +2,11 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { VscLocation } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import Cover from "../../Shared/Cover/Cover";
-import hotelImg from '../../../assets/Hotels/Room/bed-2.jpg';
+
+
 
 const Hotel = ({ hotel, children }) => {
-    const { name, location, hotel_img, description, price } = hotel;
+    const {name, location, hotel_img, description, price } = hotel;
     return (
         
         <div>
@@ -23,7 +23,7 @@ const Hotel = ({ hotel, children }) => {
                     {/* <h6 className="text-neutral font-bold">Price: ${price}</h6> */}
                     <div className="card-actions">
                         {/* TODO:     to={`/product/${product._id}`} */}
-                        <Link >
+                        <Link to={`/hotel/${hotel._id}`}>
                             <button className="btn btn-primary">
                                 Details
                             </button>
@@ -31,6 +31,7 @@ const Hotel = ({ hotel, children }) => {
                     </div>
                 </div>
                 {children}
+                
             </div>
         </div>
     );
