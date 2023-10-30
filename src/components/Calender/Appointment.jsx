@@ -71,11 +71,11 @@ const Appointment = ({ date, setDate }) => {
       </div>
 
       <div>
-        <p>
+        {/* <p>
           You reserved on {format(date[0].startDate, 'MM/dd/yyyy')} to{' '}
           {format(date[0].endDate, 'MM/dd/yyyy')}. and The selected range is{' '}
-          {/* {getSelectedDays()} days. */}
-        </p>
+          {getSelectedDays()} days.
+        </p> */}
       </div>
     </div>
   );
