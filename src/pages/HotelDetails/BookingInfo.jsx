@@ -3,9 +3,11 @@ import Appointment from '../../components/Calender/Appointment';
 import { differenceInDays, format } from 'date-fns';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebaseConfig';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { useLocation } from 'react-router-dom';
-import { DateRange, DateRangePicker } from 'react-date-range';
+import dayCoverImg from '../../assets/Hotels/Booking/booking.png';
+import axios from 'axios';
+
 
 const BookingInfo = () => {
 
@@ -16,6 +18,7 @@ const BookingInfo = () => {
     const { hotel } = state || {};
 
     console.log(hotel.price)
+
 
     const getSelectedDays = () => {
         if (date[0]) {
@@ -55,6 +58,7 @@ const BookingInfo = () => {
 
 
 
+
     const selectedDates = watch('dateRange');
     const [dateRange, setDateRange] = useState([]);
 
@@ -69,51 +73,67 @@ const BookingInfo = () => {
     };
 
 
-    //    const selectedDates = watch('dateRange');
-    //     const [selectedDatesText, setSelectedDatesText] = useState('');
 
-    //     const updateSelectedDatesText = () => {
 
-    //         if (selectedDates && selectedDates[0]) {
-    //             const startDate = selectedDates[0].startDate.toDateString();
-    //             const endDate = selectedDates[0].endDate.toDateString();
-    //             setSelectedDatesText(`${startDate} - ${endDate}`);
-    //         } else {
-    //             setSelectedDatesText('');
-    //         }
-    //     };
 
-    // console.log(startDate)
+    // const onSubmit = (data, event) => {
+    //     event.preventDefault();
+    //     data.hotel_img = hotel.hotel_img;
+    //     data.hotelName = hotel.name;
+    //     data.email = user?.email;
+    //     data.quantity = quantityRef.current.value;
+    //     data.price = parseInt(hotel.price * quantityRef.current.value );
+    //     data.category = hotel.category;
+    //     data.details = hotel.description;
+    //     data.status = "Pending";
+
+    //         axios
+    //             .post("http://localhost:5000/orders", data)
+    //             .then((res) => {
+    //                 if (res.data.insertedId) {
+    //                     alert("Room added to my order");
+    //                     reset();
+    //                     update(
+    //                         `${parseInt(hotel.availableQty) -
+    //                         quantityRef.current.value
+    //                         }`
+    //                     );
+    //                 }
+    //             });
+    // };
 
 
 
     const onSubmit = (data, event) => {
         event.preventDefault();
-        data.img = hotel.hotel_img;
+
+        data.hotel_img = hotel.hotel_img;
         data.hotelName = hotel.name;
         data.email = user?.email;
         data.quantity = quantityRef.current.value;
         data.price = parseInt(hotel.price * quantityRef.current.value);
         data.category = hotel.category;
         data.details = hotel.description;
-        data.startDate = selectedDates.startDate;
-        data.endDate = selectedDates.endDate;
         data.status = "Pending";
+        // Add other form fields here
 
-        // axios
-        //     .post("http://localhost:5000", data)
-        //     .then((res) => {
-        //         if (res.data.insertedId) {
-        //             alert("Room added to my order");
-        //             reset();
-        //             update(
-        //                 `${parseInt(hotel.availableQty) -
-        //                 quantityRef.current.value
-        //                 }`
-        //             );
-        //         }
-        //     });
+
+        axios.post("http://localhost:5000/orders", data)
+            .then((res) => {
+                if (res.data.insertedId) {
+                    alert("Room added to my order");
+                    reset();
+                    (`${parseInt(hotel.availableQty) - quantityRef.current.value}`);
+                }
+            })
+            .catch((error) => {
+                console.error("Error submitting data:", error);
+            });
     };
+
+
+
+
 
     const debounce = (func, wait) => {
         let timeout;
@@ -136,12 +156,12 @@ const BookingInfo = () => {
                     quantityRef.current.value = quantityRef.current.max;
                 }
                 setQuantity(newQuantity);
-                setPrice(`${parseInt(hotel.price) * newQuantity}`);
+                setPrice(`${parseInt(hotel.price) * newQuantity * getSelectedDays()}`);
             }, 1500);
             validateQty();
         } else {
             setQuantity(1);
-            setPrice(`${parseInt(hotel.price) * 1}`);
+            setPrice(`${parseInt(hotel.price) * 1 * getSelectedDays()}`);
         }
     };
 
@@ -158,18 +178,35 @@ const BookingInfo = () => {
 
     return (
         <div>
-            <Appointment date={date} setDate={setDate} ranges={dateRange}></Appointment>
-
-            {/* <p className='font-bold text-3xl'>{getSelectedDays()}</p> */}
+            <div className="hero min-h-screen bg-[#f1fcfe] mb-52">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <div className="text-center lg:text-left">
+                        <img src={dayCoverImg} alt="" />
+                    </div>
+                    <div className="card w-full max-w-sm shadow-2xl bg-base-100">
+                        <div className="card-body">
+                            <Appointment date={date} setDate={setDate} ranges={dateRange}></Appointment>
+                            <label htmlFor="my-modal-6" className="btn btn-primary">
+                                Book Now
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="card-actions ">
+                <div className="card-actions justify-center ">
 
-                    {/* modal modal-bottom sm:modal-middle */}
-                    <div className="border-4 sm:w-1/3">
-                        <div className=" px-10 pt-14">
+                    <input
+                        type="checkbox"
+                        id="my-modal-6"
+                        className="modal-toggle"
+                    />
+                    {/* modal modal-bottom sm:modal-middle border-4 sm:w-1/3 */}
+                    <div className="modal fixed inset-0 bg-gray-800 bg-opacity-80 z-50 flex items-center justify-center ">
+                        <div className="modal-box px-10 pt-14">
                             <div>
                                 <h1 className="text-center font-bold text-3xl uppercase pb-5">
                                     Billing Details
@@ -211,8 +248,8 @@ const BookingInfo = () => {
                                     <span className="label-text">Reservation Date Count</span>
                                 </label>
                                 <input
-                                    {...register("date")}
-                                    type=""
+                                    {...register("date_count")}
+                                    type="number"
                                     placeholder="Your Reservation Date"
                                     value={getSelectedDays()}
                                     //TODO:
@@ -225,16 +262,17 @@ const BookingInfo = () => {
                                     <span className="label-text">Selection Date Range</span>
                                 </label>
                                 <input
+                                    {...register("date")}
                                     type="text"
                                     placeholder="Your Selection Date"
                                     // value={format(date[0].startDate, 'MM/dd/yyyy') }
                                     value={`${format(date[0].startDate, 'dd/MM/yyyy')} - ${format(date[0].endDate, 'dd/MM/yyyy')}`}
                                     className="input input-bordered input-warning w-full"
-                                // readOnly
+                                    readOnly
                                 />
                             </div>
 
-                            {/* format(date[0].endDate, 'MM/dd/yyyy') */}
+
 
                             <div>
                                 <label className="label">
