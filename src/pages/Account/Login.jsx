@@ -7,9 +7,10 @@ import {
 
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import useToken from "../../hooks/useToken";
+
 import Loading from "../Shared/Loading/Loading";
 import auth from "../../firebaseConfig";
+import useToken from "../../hooks/useToken";
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] =
@@ -21,7 +22,7 @@ const Login = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
-    // const [token] = useToken(user || gUser);
+    const [token] = useToken(user || gUser);
 
     let signInError;
     const navigate = useNavigate();
@@ -29,15 +30,11 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-        //TODO: comment ta dekhe tule dity hobe nicher ta hobe r token ta nity hobe
-        if (user) {
+        if (token) {
             navigate(from, { replace: true });
         }
-    }, [ from, navigate]);
-    //     if (token) {
-    //         navigate(from, { replace: true });
-    //     }
-    // }, [token, from, navigate]);
+    }, [token, from, navigate]);
+   
 
     if (loading || gLoading) {
         return <Loading />;
@@ -52,7 +49,7 @@ const Login = () => {
     }
 
     const onSubmit = (data) => {
-        signInWithEmailAndPassword(data.email, data.password);
+        signInWithEmailAndPassword(data.email, data.password );
     };
 
     return (
