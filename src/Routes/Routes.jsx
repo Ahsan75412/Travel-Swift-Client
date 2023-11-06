@@ -1,6 +1,6 @@
 import {
-    createBrowserRouter,
-  } from "react-router-dom";
+  createBrowserRouter,
+} from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 // import Hotels from "../pages/Hotels/allHotels/Hotels";
@@ -12,50 +12,88 @@ import Hotel from "../pages/Hotel/Hotel";
 import { ToastContainer } from "react-toastify";
 import BookingInfo from "../pages/HotelDetails/BookingInfo";
 import Dashboard from "../Layout/Dashboard";
+import Users from "../pages/Dashboard/AllUsers/Users";
 
 
 
-  
+
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>, // this main from layout folder
-      children: [
-        {
-            path: "/",
-            element: <Home></Home>,
-        },
-        // {
-        //     path: "",
-        //     element: <Hotels></Hotels>,
-        // },
-        {
-            path: "hotels",
-            element: <Hotel></Hotel>,
-        },
-        {
-            path: "hotel/:hotelId",
-            element: <HotelDetails></HotelDetails>,
-        },
-        {
-            path: "booking",
-            element: <BookingInfo></BookingInfo>,
-        },
-        {
-            path: "dashboard",
-            element: <Dashboard></Dashboard>,
-        },
-        {
-            path: "login",
-            element: <Login></Login>,
-        },
-        {
-            path: "signup",
-            element: <SignUp></SignUp>,
-        },
+  {
+    path: "/",
+    element: <Main></Main>, // this main from layout folder
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      // {
+      //     path: "",
+      //     element: <Hotels></Hotels>,
+      // },
+      {
+        path: "hotels",
+        element: <Hotel></Hotel>,
+      },
+      {
+        path: "hotel/:hotelId",
+        element: <HotelDetails></HotelDetails>,
+      },
+      {
+        path: "booking",
+        element: <BookingInfo></BookingInfo>,
+      },
 
-      ]
-      
-    },
-    <ToastContainer></ToastContainer>
-  ]);
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "signup",
+        element: <SignUp></SignUp>,
+      }
+
+    ]
+
+  },
+
+   // Dashboard Route different path 
+   {
+    path: 'dashboard',
+    element: <Dashboard></Dashboard>,
+    children: [
+      // {
+      //   path: 'userhome',
+      //   element: <UserHome></UserHome>,
+
+      // },
+   
+      // {
+      //   path:'payment',
+      //   element: <Payment></Payment>
+      // },
+
+      //admin routes
+      // {
+      //   path: 'adminhome',
+      //   element: <AdminRoute><AdminHome></AdminHome></AdminRoute>,
+
+      // },
+      {
+        path: 'users',
+        element: <Users></Users>,
+
+      },
+
+      // {
+      //   path: 'addItem',
+      //   element: <AdminRoute><AddItem></AddItem></AdminRoute>
+      // },
+      // {
+      //   path: 'manageitems',
+      //   element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
+      // },
+
+    ]
+  }
+ 
+]);

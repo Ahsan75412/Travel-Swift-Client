@@ -17,7 +17,7 @@ const NavBar = () => {
     signOut(auth);
     localStorage.removeItem("accessToken");
   };
-  console.log(user);
+  // console.log(user);
 
 
   const navOptions = <>
