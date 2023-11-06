@@ -11,6 +11,7 @@ import HotelDetails from "../pages/HotelDetails/HotelDetails";
 import Hotel from "../pages/Hotel/Hotel";
 import { ToastContainer } from "react-toastify";
 import BookingInfo from "../pages/HotelDetails/BookingInfo";
+import Dashboard from "../Layout/Dashboard";
 
 
 
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
         {
             path: "booking",
             element: <BookingInfo></BookingInfo>,
+        },
+        {
+            path: "dashboard",
+            element: <Dashboard></Dashboard>,
         },
         {
             path: "login",
