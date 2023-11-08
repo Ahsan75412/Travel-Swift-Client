@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const UserRow = ({ user, refetch, index }) => {
     const { email, role } = user;
-//Make an Admin here
+    //Make an Admin here
     const makeAdmin = () => {
         fetch(
             `http://localhost:5000/user/admin/${email}`,
@@ -86,6 +86,7 @@ const UserRow = ({ user, refetch, index }) => {
                     </button>
                 )}
             </td>
+       
 
             <td>
                 <button className="btn btn-outline btn-sm btn-error">

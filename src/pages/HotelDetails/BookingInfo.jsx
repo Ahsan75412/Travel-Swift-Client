@@ -266,7 +266,12 @@ const BookingInfo = () => {
                                     type="text"
                                     placeholder="Your Selection Date"
                                     // value={format(date[0].startDate, 'MM/dd/yyyy') }
-                                    value={`${format(date[0].startDate, 'dd/MM/yyyy')} - ${format(date[0].endDate, 'dd/MM/yyyy')}`}
+                                    // value={`${format(date[0].startDate, 'dd/MM/yyyy')} - ${format(date[0].endDate, 'dd/MM/yyyy')}`}
+
+                                    value={`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(
+                                        date[0].endDate,
+                                        "dd/MM/yyyy"
+                                    )}`}
                                     className="input input-bordered input-warning w-full"
                                     readOnly
                                 />

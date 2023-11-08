@@ -1,7 +1,7 @@
 
 
 import { NavLink, Outlet } from "react-router-dom";
-import { FaShoppingCart, FaWallet, FaCalendar, FaHome, FaUtensils, FaBook, FaUsers } from 'react-icons/fa';
+import { FaWallet, FaCalendar, FaHome, FaUtensils, FaBook, FaUsers } from 'react-icons/fa';
 
 import useAdmin from "../hooks/useAdmin";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -47,44 +47,14 @@ const Dashboard = () => {
 
                                 {/* Admin side bar content here */}
                                 <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
-                                <li><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils> Add an Item</NavLink></li>
-                                <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet>Manage Items</NavLink></li>
+                                <li><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils> Add an Hotel</NavLink></li>
+                                <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
                                 <li><NavLink to="/dashboard/history"><FaBook></FaBook>Manage Bookings</NavLink></li>
                                 <li><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
 
 
                             </>
-                        ) : (
-                            <>
-
-                                {/* User side bar content here */}
-                                <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
-                                <li><NavLink to="/dashboard/reservations"><FaCalendar></FaCalendar> Reservation</NavLink></li>
-                                <li><NavLink to="/dashboard/history"><FaWallet></FaWallet>Payment History</NavLink></li>
-
-                                {/* <li>
-                                <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart
-                                    <span className="badge  badge-secondary">+{cart?.length || 0}</span>
-                                </NavLink>
-
-                            </li> */}
-                                {/* TODO: */}
-                                <li>
-                                    {user ? (
-                                        <button className="btn btn-link" onClick={logout}>
-                                            Sign Out
-                                        </button>
-                                    ) : (
-                                        <NavLink to="/login">Login</NavLink>
-                                    )}
-                                </li>
-
-
-                            </>
-                        )}
-
-                    {
-                        host ?
+                        ) : host ?
                             <>
                                 <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Host Home</NavLink></li>
                                 <li><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils>Add Hotel</NavLink></li>
@@ -92,14 +62,36 @@ const Dashboard = () => {
                                 <li><NavLink to="/dashboard/history"><FaBook></FaBook>Manage Bookings</NavLink></li>
                                 <li><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
 
-                            </> : <>
+                            </> : (
+                                <>
 
-                          
+                                    {/* User side bar content here */}
+                                    <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
+                                    <li><NavLink to="/dashboard/reservations"><FaCalendar></FaCalendar> Reservation</NavLink></li>
+                                    <li><NavLink to="/dashboard/history"><FaWallet></FaWallet>Payment History</NavLink></li>
+
+                                    {/* <li>
+                                <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart
+                                    <span className="badge  badge-secondary">+{cart?.length || 0}</span>
+                                </NavLink>
+
+                            </li> */}
+                                    {/* TODO: */}
+                                    <li>
+                                        {user ? (
+                                            <button className="btn btn-link" onClick={logout}>
+                                                Sign Out
+                                            </button>
+                                        ) : (
+                                            <NavLink to="/login">Login</NavLink>
+                                        )}
+                                    </li>
 
 
-                            </>
+                                </>
+                            )}
 
-                    }
+
 
 
 

@@ -13,6 +13,8 @@ import { ToastContainer } from "react-toastify";
 import BookingInfo from "../pages/HotelDetails/BookingInfo";
 import Dashboard from "../Layout/Dashboard";
 import Users from "../pages/Dashboard/AllUsers/Users";
+import Admin_Home from "../pages/Dashboard/Admin/Admin_Home";
+import AddHotels from "../pages/Dashboard/Admin/AddHotels";
 
 
 
@@ -61,33 +63,32 @@ export const router = createBrowserRouter([
     path: 'dashboard',
     element: <Dashboard></Dashboard>,
     children: [
-      // {
-      //   path: 'userhome',
-      //   element: <UserHome></UserHome>,
+      {
+        path: 'adminhome',
+        element: <Admin_Home></Admin_Home>,
 
-      // },
+      },
    
-      // {
-      //   path:'payment',
-      //   element: <Payment></Payment>
-      // },
+      {
+        path:'addhotels',
+        element: <AddHotels></AddHotels>
+      },
 
       //admin routes
       // {
       //   path: 'adminhome',
       //   element: <AdminRoute><AdminHome></AdminHome></AdminRoute>,
-
       // },
       {
         path: 'users',
         element: <Users></Users>,
-
       },
 
       // {
       //   path: 'addItem',
       //   element: <AdminRoute><AddItem></AddItem></AdminRoute>
       // },
+
       // {
       //   path: 'manageitems',
       //   element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
