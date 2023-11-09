@@ -26,139 +26,168 @@ const AddHotels = () => {
 
 
 
-
-
     const { register, handleSubmit, reset } = useForm();
 
     const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`;
 
 
 
-
     // const onSubmit = data => {
-    //TODO:
-    //     const formData = new FormData();
-    //     formData.append('image', data.image[0]);
-
-    //     fetch(img_hosting_url, {
-    //         method: 'POST',
-    //         body: formData,
-    //     })
-
-    //         .then(res => res.json())
-    //         .then(imgResponse => {
-    //             if (imgResponse.success) {
-    //                 const imgURL = imgResponse.data.display_url;
-    //                 const { name, phone, location, image, hotel_img, rating, description, price, category, availableQty, recipe } = data;
-    //                 const newItem = { name, price: parseFloat(price), category, phone, location, image, hotel_img, rating, description, availableQty, image: imgURL }
-
-    //                 console.log(newItem);
-
-    //                 axios.post('/hotel', newItem)
-    //                     .then(data => {
-    //                         console.log('after posting new hotel', data.data)
-    //                         if (data.data.insertedId) {
-
-    //                             reset();
-    //                             Swal.fire({
-    //                                 position: 'top-end',
-    //                                 icon: 'success',
-    //                                 title: 'Item added Successfully!',
-    //                                 showConfirmButton: false,
-    //                                 timer: 1500
-    //                             })
-    //                         }
-    //                     })
-    //             }
-    //         })
-    // };
+    //     // TODO:
 
 
-    // const onSubmit = async (data) => {
-    //     try {
+    //     console.log('p00 -> ', data.image);
+
+    //     const files = data.image;
+    //     const uploaded = [];
+
+    //     for (let i = 0; i < files.length; i++) {
+    //         const file = files[i];
+    //         let url = '';
+
     //         const formData = new FormData();
+    //         formData.append('image', file);
 
-    //         // Append each file to the formData
-    //         for (const file of data.image) {
-    //             formData.append('images', file);
-    //         }
-
-    //         // Upload multiple images
-    //         const imgResponse = await fetch(img_hosting_url, {
+    //         fetch(img_hosting_url, {
     //             method: 'POST',
     //             body: formData,
-    //         });
+    //         })
+    //             .then((res) => res.json())
+    //             .then((res) => {
+    //                 if (res.success) {
+    //                     url = res.data?.medium?.url || res.data?.url;
 
-    //         const imgData = await imgResponse.json();
+    //                     uploaded.push(url);
+    //                 }
+    //             })
 
-    //         if (imgData.success) {
-    //             const imgURLs = imgData.data.images.map((image) => image.display_url);
+    //         if ((i === (files.length - 1)) && (url !== '')) {
+    //             console.log('done');
+    //         }
+    //     }
 
-    //             const { name, phone, location, image, hotel_img, rating, description,availableDate, price, category, availableQty } = data;
-    //            console.log(data)
-    //             const newItem = { name, price: parseFloat(price), category, phone, location, image, hotel_img, rating, description,availableDate, availableQty, images: imgURLs };
-    //             console.log(newItem)
-    //             // Post the data to your server
-    //             const response = await axios.post('/hotels', newItem);
-    //             console.log(response)
 
-    //             if (response.data.insertedId) {
+    //     // const formData = new FormData();
+    //     // formData.append('image', data.image[0]);
+
+
+
+
+    //     // fetch(img_hosting_url, {
+    //     //     method: 'POST',
+    //     //     body: formData,
+    //     // })
+
+    //     //     .then(res => res.json())
+    //     //     .then(imgResponse => {
+    //     // if (imgResponse.success) {
+    //     // const imgURL  = imgResponse.data.display_url;
+
+    //     const { name, phone, location, image, description, price, category, availableQty, availableDate } = data;
+    //     const newItem = {
+    //         name,
+    //         price: parseFloat(price),
+    //         category,
+    //         phone,
+    //         location,
+    //         image,
+    //         description,
+    //         availableQty,
+    //         availableDate,
+    //         image: imgURL = []
+    //     }
+
+    //     console.log(newItem);
+
+    //     axios.post('http://localhost:5000/hotels', newItem)
+    //         .then(data => {
+    //             console.log('after posting new hotel', data.data)
+    //             if (data.data.insertedId) {
+
     //                 reset();
     //                 Swal.fire({
     //                     position: 'top-end',
     //                     icon: 'success',
     //                     title: 'Item added Successfully!',
     //                     showConfirmButton: false,
-    //                     timer: 1500,
-    //                 });
+    //                     timer: 1500
+    //                 })
     //             }
-    //         }
-    //     } catch (error) {
-    //         console.error('Error:', error);
-    //     }
+    //         })
+    //     // }
+    //     // })
+
+
     // };
 
+    const onSubmit = async (data) => {
+        try {
+            const files = data.image;
+            const uploaded = [];
+    
+            // Create an array of Promises for each image upload
+            // const uploadPromises = files.map(async (file) => {
+                // const formData = new FormData();
+                // formData.append('image', file);
 
+                for (let i = 0; i < files.length; i++) {
+                            const file = files[i];
+                            let url = '';
+                
+                            const formData = new FormData();
+                            formData.append('image', file);
 
-    const onSubmit = data => {
-        // TODO:
-        const formData = new FormData();
-        formData.append('image', data.image[0]);
-
-        fetch(img_hosting_url, {
-            method: 'POST',
-            body: formData,
-        })
-
-            .then(res => res.json())
-            .then(imgResponse => {
-                if (imgResponse.success) {
-                    const imgURL = imgResponse.data.display_url;
-                    const { name, phone, location, image, description, price, category, availableQty, availableDate } = data;
-                    const newItem = { name, price: parseFloat(price), category, phone, location, image, description, availableQty, availableDate, image: imgURL }
-
-                    console.log(newItem);
-
-                    axios.post('http://localhost:5000/hotels', newItem)
-                        .then(data => {
-                            console.log('after posting new hotel', data.data)
-                            if (data.data.insertedId) {
-
-                                reset();
-                                Swal.fire({
-                                    position: 'top-end',
-                                    icon: 'success',
-                                    title: 'Item added Successfully!',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                })
-                            }
-                        })
+    
+                const imgResponse = await fetch(img_hosting_url, {
+                    method: 'POST',
+                    body: formData,
+                });
+    
+                const imgData = await imgResponse.json();
+    
+                if (imgData.success) {
+                    const url = imgData.data?.medium?.url || imgData.data?.url;
+                    uploaded.push(url);
+                } else {
+                    throw new Error('Image upload failed');
                 }
-            })
+            // });
+                }
+            // Wait for all image uploads to complete
+            // await Promise.all(uploadPromises);
+    
+            // Once all images are uploaded, proceed with the rest of the data
+            const { name, phone, image, location, description, price, category, availableQty, availableDate } = data;
+            const newItem = {
+                name,
+                price: parseFloat(price),
+                category,
+                phone,
+                location,
+                description,
+                availableQty,
+                availableDate,
+                image: uploaded,
+            };
+    
+            // Post the data to your server
+            const response = await axios.post('http://localhost:5000/hotels', newItem);
+    
+            if (response.data.insertedId) {
+                reset();
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Item added Successfully!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                });
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
     };
-
-
+    
 
     return (
         <div className="w-full">
