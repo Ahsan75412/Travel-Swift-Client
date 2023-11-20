@@ -1,10 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-
 import InfoModal from "./InfoModal";
 import UpdateInfoModal from "./UpdateInfoModal";
 import auth from "../../../firebaseConfig";
+import {FaGraduationCap} from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+
 
 
 const MyProfile = () => {
@@ -48,22 +51,23 @@ const MyProfile = () => {
                             <p className="text-sm">{user?.email}</p>
                         </div>
                         <div className="space-x-4 py-5">
-                            <a
+                            {/* <a
                                 target="_blank"
-                                href="https://www.linkedin.com/in/ahsan-habib-programmer/"
+                                href="https://www.linkedin.com/feed/"
                             >
                                 <button className="fab fa-linkedin btn btn-info text-white btn-xs"></button>
-                            </a>
+                            </a> */}
 
                             <a
                                 target="_blank"
-                                href="https://www.facebook.com/ahsanhabib.mradul"
+                                href="https://www.facebook.com/"
                             >
+                               
                                 <button className="fab fa-facebook btn btn-secondary text-white btn-xs"></button>
                             </a>
                             <a
                                 target="_blank"
-                                href="https://github.com/Ahsan75412"
+                                href="https://twitter.com/"
                             >
                                 <button className="fab fa-github btn bg-black  text-white btn-xs"></button>
                             </a>
@@ -82,16 +86,20 @@ const MyProfile = () => {
                                     </h2>
                                     <div className="text-left font-bold space-y-3">
                                         <p>
-                                            <i class="fas fa-graduation-cap"></i>{" "}
+                                            
+
+                                            <FaGraduationCap />{" "}
                                             Studied at &nbsp;{info.studyIn}
                                         </p>
                                         <p>
-                                            <i class="fas fa-home"></i>
+                                            {/* <i class="fas fa-home"></i> */}
+                                            <FaHome />
                                             &nbsp;Lives in {info.livesIn}{" "}
                                         </p>
                                         <p>
                                             {" "}
-                                            <i class="fas fa-phone"></i>
+                                            {/* <i class="fas fa-phone"></i> */}
+                                            <FaPhoneAlt />
                                             &nbsp;Phone: {info.phone}{" "}
                                         </p>
                                     </div>

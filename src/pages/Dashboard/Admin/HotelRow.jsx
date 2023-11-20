@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 
 
@@ -140,6 +140,9 @@ const HotelRow = ({ hotel, index, refetch }) => {
                                 id={`id${hotel._id}`}
                                 className="modal-toggle"
                             />
+
+                       
+
                             <div className="modal modal-bottom sm:modal-middle">
                                 <div className="modal-box px-10 pt-14">
                                     <div>

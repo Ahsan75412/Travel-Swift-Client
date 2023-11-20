@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
 import auth from "../../../firebaseConfig";
-
+import Swal from 'sweetalert2'
 
 const UpdateInfoModal = () => {
     const { register, handleSubmit, reset } = useForm();
     const [lives, setLives] = useState([]);
     const [study, setStudy] = useState([]);
     const [phn, setPhn] = useState([]);
-    const [linked, setLinked] = useState([]);
+    const [tweeter, setTweeter] = useState([]);
     const [fb, setFb] = useState([]);
-    const [git, setGit] = useState([]);
+    // const [git, setGit] = useState([]);
     const [user] = useAuthState(auth);
 
     const onSubmit = (data) => {
@@ -20,15 +19,15 @@ const UpdateInfoModal = () => {
         const updatedStudyIn = data.studyIn;
         const updatedPhone = data.phone;
         const updatedFacebook = data.facebook;
-        const updatedLinkedIn = data.linkedIn;
-        const updatedGithub = data.github;
+        const updatedTweeter = data.Tweeter;
+        // const updatedGithub = data.github;
 
         const bodyData = {
             updatedLivesIn,
             updatedStudyIn,
             updatedPhone,
             updatedFacebook,
-            updatedLinkedIn,
+            updatedTweeter,
             updatedGithub,
         };
         fetch(
@@ -49,24 +48,31 @@ const UpdateInfoModal = () => {
                         updatedNStudyIn,
                         updatedNPhone,
                         updatedNFacebook,
-                        updatedNLinkedIn,
-                        updatedNGithub,
+                        updatedNTweeter,
+                        // updatedNGithub,
                     } = {
                         ...lives,
                         ...study,
                         ...phn,
-                        ...linked,
+                        ...tweeter,
                         ...fb,
-                        ...git,
+                        // ...git,
                     };
                     setLives(updatedNLivesIn);
                     setStudy(updatedNStudyIn);
                     setPhn(updatedNPhone);
-                    setLinked(updatedNLinkedIn);
+                    setTweeter(updatedNTweeter);
                     setFb(updatedNFacebook);
-                    setGit(updatedNGithub);
+                    // setGit(updatedNGithub);
                     reset();
-                    toast("Updated Successfully", { type: "success" });
+                    // toast("Updated Successfully", { type: "success" });
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Your work has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }
             });
     };
@@ -141,12 +147,12 @@ const UpdateInfoModal = () => {
                             </div>
                             <div>
                                 <label className="label">
-                                    <span className="label-text">LinkedIn</span>
+                                    <span className="label-text">Tweeter</span>
                                 </label>
                                 <input
-                                    {...register("linkedin")}
+                                    {...register("Tweeter")}
                                     type="text"
-                                    placeholder="LinkedIn URL"
+                                    placeholder="Tweeter URL"
                                     className="input input-bordered input-warning w-full "
                                 />
                             </div>
@@ -161,7 +167,7 @@ const UpdateInfoModal = () => {
                                     className="input input-bordered input-warning w-full "
                                 />
                             </div>
-                            <div>
+                            {/* <div>
                                 <label className="label">
                                     <span className="label-text">Git hub</span>
                                 </label>
@@ -171,7 +177,7 @@ const UpdateInfoModal = () => {
                                     placeholder="Git hub URL"
                                     className="input input-bordered input-warning w-full "
                                 />
-                            </div>
+                            </div> */}
 
                             <div className="modal-action justify-evenly">
                                 <label

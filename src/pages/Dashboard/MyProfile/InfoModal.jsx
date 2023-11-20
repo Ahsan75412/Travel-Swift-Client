@@ -87,7 +87,7 @@ const InfoModal = () => {
                                     className="input input-bordered input-warning w-full "
                                 />
                             </div>
-                            <div>
+                            {/* <div>
                                 <label className="label">
                                     <span className="label-text">LinkedIn</span>
                                 </label>
@@ -97,7 +97,7 @@ const InfoModal = () => {
                                     placeholder="LinkedIn URL"
                                     className="input input-bordered input-warning w-full "
                                 />
-                            </div>
+                            </div> */}
                             <div>
                                 <label className="label">
                                     <span className="label-text">Facebook</span>
@@ -111,12 +111,12 @@ const InfoModal = () => {
                             </div>
                             <div>
                                 <label className="label">
-                                    <span className="label-text">Git hub</span>
+                                    <span className="label-text">Tweeter</span>
                                 </label>
                                 <input
-                                    {...register("github")}
+                                    {...register("tweeter")}
                                     type="text"
-                                    placeholder="Git hub URL"
+                                    placeholder="Tweeter URL"
                                     className="input input-bordered input-warning w-full "
                                 />
                             </div>
