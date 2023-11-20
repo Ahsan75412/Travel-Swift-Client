@@ -15,6 +15,8 @@ import Dashboard from "../Layout/Dashboard";
 import Users from "../pages/Dashboard/AllUsers/Users";
 import Admin_Home from "../pages/Dashboard/Admin/Admin_Home";
 import AddHotels from "../pages/Dashboard/Admin/AddHotels";
+import ManageHotels from "../pages/Dashboard/Admin/ManageHotels";
+import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
 
 
 
@@ -72,6 +74,14 @@ export const router = createBrowserRouter([
       {
         path:'addhotels',
         element: <AddHotels></AddHotels>
+      },
+      {
+        path:'managehotel',
+        element: <ManageHotels></ManageHotels>
+      },
+      {
+        path:'profile',
+        element: <MyProfile></MyProfile>
       },
 
       //admin routes

@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 
 
 const Hotel = ({ hotel, children }) => {
-    const {name, location, hotel_img, description, price } = hotel;
+    const {name, location, image=[], description, price } = hotel;
     return (
         
         <div>
             <div className="card w-full bg-gray-50 shadow-xl border ">
                 <figure className="px-10 pt-10">
-                    <img src={hotel_img} alt="" className="rounded-xl w-[400px] h-[300px]" />
+                    <img src={image[0]} alt="" className="rounded-xl w-[400px] h-[300px]"/>
                 </figure>
                 <div className="card-body items-center text-center">
                     {/* <h4>{category}</h4> */}

@@ -1,5 +1,3 @@
-
-
 import { NavLink, Outlet } from "react-router-dom";
 import { FaWallet, FaCalendar, FaHome, FaUtensils, FaBook, FaUsers } from 'react-icons/fa';
 
@@ -48,11 +46,12 @@ const Dashboard = () => {
                                 {/* Admin side bar content here */}
                                 <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
                                 <li><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils> Add an Hotel</NavLink></li>
-                                <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
+                                <li><NavLink to="/dashboard/managehotel"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
                                 <li><NavLink to="/dashboard/history"><FaBook></FaBook>Manage Bookings</NavLink></li>
                                 <li><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
+                                <li><NavLink to="/dashboard/profile"><FaUsers></FaUsers>My Profile</NavLink></li>
 
-
+                                
                             </>
                         ) : host ?
                             <>
@@ -61,6 +60,7 @@ const Dashboard = () => {
                                 <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
                                 <li><NavLink to="/dashboard/history"><FaBook></FaBook>Manage Bookings</NavLink></li>
                                 <li><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
+                                <li><NavLink to="/dashboard/profile"><FaUsers></FaUsers>My Profile</NavLink></li>
 
                             </> : (
                                 <>
@@ -68,7 +68,7 @@ const Dashboard = () => {
                                     {/* User side bar content here */}
                                     <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
                                     <li><NavLink to="/dashboard/reservations"><FaCalendar></FaCalendar> Reservation</NavLink></li>
-                                    <li><NavLink to="/dashboard/history"><FaWallet></FaWallet>Payment History</NavLink></li>
+                                    <li><NavLink to="/dashboard/profile"><FaWallet></FaWallet>My Profile</NavLink></li>
 
                                     {/* <li>
                                 <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart
