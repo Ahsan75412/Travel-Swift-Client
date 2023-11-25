@@ -17,6 +17,11 @@ import Admin_Home from "../pages/Dashboard/Admin/Admin_Home";
 import AddHotels from "../pages/Dashboard/Admin/AddHotels";
 import ManageHotels from "../pages/Dashboard/Admin/ManageHotels";
 import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
+import MyBooking from "../pages/Dashboard/User_Dashboard/MyBooking";
+import BookingTable from "../pages/Dashboard/User_Dashboard/BookingTable";
+import Bookings from "../pages/Dashboard/Admin/bookings";
+import Payment from "../pages/Dashboard/Payment";
+import AddReview from "../pages/Dashboard/User_Dashboard/AddReview";
 
 
 
@@ -80,6 +85,10 @@ export const router = createBrowserRouter([
         element: <ManageHotels></ManageHotels>
       },
       {
+        path:'bookings',
+        element: <Bookings></Bookings>
+      },
+      {
         path:'profile',
         element: <MyProfile></MyProfile>
       },
@@ -93,6 +102,23 @@ export const router = createBrowserRouter([
         path: 'users',
         element: <Users></Users>,
       },
+      {
+        path: 'mybooking',
+        element: <MyBooking></MyBooking>,
+      },
+      {
+        path: 'bookingtable',
+        element: <BookingTable></BookingTable>
+      },
+      {
+        path: 'payment/:id',
+        element: <Payment></Payment>
+      },
+      {
+        path: 'addreview',
+        element: <AddReview></AddReview>
+      },
+    
 
       // {
       //   path: 'addItem',

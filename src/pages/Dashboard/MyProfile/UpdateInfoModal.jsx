@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../../../firebaseConfig";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 const UpdateInfoModal = () => {
     const { register, handleSubmit, reset } = useForm();

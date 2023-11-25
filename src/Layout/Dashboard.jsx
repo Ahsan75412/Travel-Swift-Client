@@ -43,18 +43,21 @@ const Dashboard = () => {
 
                             <>
 
+                                <h2>Admin</h2>
                                 {/* Admin side bar content here */}
                                 <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
                                 <li><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils> Add an Hotel</NavLink></li>
                                 <li><NavLink to="/dashboard/managehotel"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
                                 <li><NavLink to="/dashboard/history"><FaBook></FaBook>Manage Bookings</NavLink></li>
+                                <li><NavLink to="/dashboard/bookings"><FaBook></FaBook>All Bookings</NavLink></li>
                                 <li><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
                                 <li><NavLink to="/dashboard/profile"><FaUsers></FaUsers>My Profile</NavLink></li>
 
-                                
+
                             </>
                         ) : host ?
                             <>
+                                <h2>Host</h2>
                                 <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Host Home</NavLink></li>
                                 <li><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils>Add Hotel</NavLink></li>
                                 <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
@@ -66,8 +69,16 @@ const Dashboard = () => {
                                 <>
 
                                     {/* User side bar content here */}
+                                    <h2>user</h2>
                                     <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
-                                    <li><NavLink to="/dashboard/reservations"><FaCalendar></FaCalendar> Reservation</NavLink></li>
+
+                                    <li><NavLink to="/dashboard/mybooking"><FaCalendar></FaCalendar>My Booking</NavLink></li>
+
+                                    <li><NavLink to="/dashboard/bookingtable"><FaCalendar></FaCalendar>Booking Table</NavLink></li>
+
+                                    <li><NavLink to="/dashboard/addreview"><FaCalendar></FaCalendar>
+                                        Add Review</NavLink></li>
+
                                     <li><NavLink to="/dashboard/profile"><FaWallet></FaWallet>My Profile</NavLink></li>
 
                                     {/* <li>

@@ -2,6 +2,9 @@ import axios from "axios";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../../../firebaseConfig";
+import Swal from 'sweetalert2'
+
+
 
 
 const InfoModal = () => {
@@ -13,7 +16,13 @@ const InfoModal = () => {
             .post("http://localhost:5000/info", data)
             .then((res) => {
                 if (res.data.insertedId) {
-                    alert("Info added successfully");
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Your work has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                     reset();
                 }
             });

@@ -1,79 +1,79 @@
 [
     {
-      "_id": 1,
+      
       "name": "John Doe",
       "description": "Absolutely loved the stay at Grand View Hotel! The breathtaking views from the rooftop restaurant were unforgettable. The room was spacious, clean, and the staff was incredibly friendly. Will definitely come back!",
       "rating": 5
     },
     {
-      "_id": 2,
+      
       "name": "Alice Smith",
       "description": "Oceanfront Paradise Resort exceeded all expectations. The beachfront villa was luxurious, and the private beach access made it a perfect getaway. The resort's amenities and staff made our stay memorable.",
       "rating": 4.5
     },
     {
-      "_id": 3,
+      
       "name": "David Johnson",
       "description": "Mountain Retreat Lodge provided the perfect escape into nature. The hiking trails were beautiful, and the mountain suite offered stunning views. The lodge's cozy atmosphere and friendly service made our vacation special.",
       "rating": 4
     },
 
     {
-        "_id": 4,
+        
         "name": "Emily Brown",
         "description": "The service at Grand View Hotel was exceptional. The staff went above and beyond to make our anniversary special. The panoramic views from the rooftop restaurant added a romantic touch to our stay. Highly recommended!",
         "rating": 4.8
       },
       {
-        "_id": 5,
+        
         "name": "Michael Wilson",
         "description": "Our family had a fantastic time at Oceanfront Paradise Resort. The kids loved the water sports, and the private beach made it easy for us to relax. The resort's dining options were diverse and delicious.",
         "rating": 5
       },
       {
-        "_id": 6,
+        
         "name": "Sophie Turner",
         "description": "Mountain Retreat Lodge is a hidden gem. The wellness spa was rejuvenating, and the fireplace lounge provided a cozy retreat in the evenings. The personalized attention to detail made our stay memorable.",
         "rating": 4.7
       },
       {
-        "_id": 7,
+        
         "name": "Robert Harris",
         "description": "Luxury Paradise Hotel is truly luxurious. The attention to detail in the rooms and common areas is impressive. The on-site spa provided a relaxing experience, and the overall ambiance was top-notch.",
         "rating": 4.9
       },
       {
-        "_id": 8,
+        
         "name": "Lily Rodriguez",
         "description": "Seaside Resort & Spa is a perfect getaway. The restaurant's oceanfront dining was a highlight, and the spa treatments were exceptional. The resort's location offers stunning sunset views.",
         "rating": 4.5
       },
       {
-        "_id": 9,
+        
         "name": "Daniel Martinez",
         "description": "Mountain View Lodge lived up to its name. The scenic views from the hiking trails were breathtaking, and the café offered delicious treats. The lodge's atmosphere felt like a home away from home.",
         "rating": 4.6
       },
       {
-        "_id": 10,
+        
         "name": "Olivia White",
         "description": "Oceanfront Paradise Resort is paradise indeed. The infinity pool overlooking the ocean was a highlight. The attentive staff and modern amenities made our stay comfortable and enjoyable.",
         "rating": 4.8
       },
       {
-        "_id": 11,
+        
         "name": "William Turner",
         "description": "Luxury Paradise Hotel sets the standard for luxury. The add an item feature in the hotel's app made ordering meals convenient, and the management's attention to guest satisfaction was evident throughout our stay.",
         "rating": 5
       },
       {
-        "_id": 12,
+        
         "name": "Emma Davis",
         "description": "Seaside Resort & Spa provides a perfect balance of relaxation and excitement. The water sports activities were a blast, and the spacious rooms offered comfort with a touch of elegance.",
         "rating": 4.7
       },
       {
-        "_id": 13,
+        
         "name": "Jackson Adams",
         "description": "Grand View Hotel is a gem in Nature Valley. The wellness facilities were outstanding, and the conference facilities made our business retreat productive and enjoyable. The staff's professionalism stood out.",
         "rating": 4.9
