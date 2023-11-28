@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Hotel from "../Hotel/Hotel";
 import { Helmet } from "react-helmet-async";
-import SemiCover from "../../Shared/SemiCover/SemiCover";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+
+
+
 
 
 const Hotels = () => {
@@ -34,14 +36,7 @@ const Hotels = () => {
             <Helmet>
                 <title>Travel-Swift | Home</title>
             </Helmet>
-{/* 
-            {
-                location.pathname === "/hotels" ? (
-                    <SemiCover></SemiCover>
-                ) : (
-                    <></>
-                )
-            } */}
+
 
             {location.pathname === "/" ? (
                 <div className="flex justify-between py-20 flex-col lg:flex-row px-20">
@@ -60,10 +55,10 @@ const Hotels = () => {
 
                 ></SectionTitle>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-10 lg:px-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-10 lg:px-20">
                 {location.pathname === "/" || location.pathname === "/home "
                     ? hotels
-                        .slice(0, 4)
+                        .slice(0, 3)
                         .map((hotel) => (
                             <Hotel
                                 key={hotel._id}

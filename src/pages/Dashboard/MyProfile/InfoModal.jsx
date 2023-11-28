@@ -10,6 +10,7 @@ import Swal from 'sweetalert2'
 const InfoModal = () => {
     const { register, handleSubmit, reset } = useForm();
     const [user] = useAuthState(auth);
+console.log('i am from infomodal',user)
 
     const onSubmit = (data) => {
         axios

@@ -6,33 +6,44 @@ import { Link } from "react-router-dom";
 
 
 const Hotel = ({ hotel, children }) => {
-    const {name, location, image=[], description, price } = hotel;
+    const { name, location, image = [], description, price } = hotel;
     return (
-        
+
         <div>
             <div className="card w-full bg-gray-50 shadow-xl border ">
-                <figure className="px-10 pt-10">
-                    <img src={image[0]} alt="" className="rounded-xl w-[400px] h-[300px]"/>
+                {/* TODO: px-10 pt-10 {image[1]}*/}
+                <figure className="">
+                    <Link to={`/hotel/${hotel._id}`}>
+                        <img src={image} alt="" className="rounded-xl object-cover w-[400px] h-[300px] " />
+
+                    </Link>
+
                 </figure>
+           
+
                 <div className="card-body items-center text-center">
                     {/* <h4>{category}</h4> */}
-                    <h2 className="card-title">{name.slice(0, 18)}...</h2>
-                    <p>{description.slice(0, 90)}...</p>
-                    <h6><VscLocation></VscLocation> {location}</h6>
-                    <p className='font-bold'>${price} / night</p>
+                    {/* <h2 className="card-title">{name.slice(0, 18)}...</h2> */}
+                    {/* <p>{description.slice(0, 90)}...</p> */}
+                    {/* <h6><VscLocation></VscLocation> {location}</h6> */}
+                    {/* <p className='font-bold'>${price} / night</p> */}
                     {/* <h6 className="text-neutral font-bold">Price: ${price}</h6> */}
-                    <div className="card-actions">
-                        {/* TODO:     to={`/product/${product._id}`} */}
+
+
+                    {/* <div className="card-actions">
+                    TODO:     to={`/product/${product._id}`}
                         <Link to={`/hotel/${hotel._id}`}>
                             <button className="btn btn-primary">
                                 Details
                             </button>
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
+
                 {children}
-                
+
             </div>
+
         </div>
     );
 };

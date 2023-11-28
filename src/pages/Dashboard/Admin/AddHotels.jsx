@@ -5,7 +5,8 @@ import axios from "axios";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import { useState } from "react";
-
+import auth from "../../../firebaseConfig";
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const img_hosting_token = import.meta.env.VITE_Image_Upload_token;
 
@@ -22,7 +23,7 @@ const AddHotels = () => {
         },
     ]);
 
-
+    const [user] = useAuthState(auth);
 
 
 
@@ -135,9 +136,10 @@ const AddHotels = () => {
             // await Promise.all(uploadPromises);
             }
             // Once all images are uploaded, proceed with the rest of the data
-            const { name, phone, location, description, price, category, availableQty, availableDate } = data;
+            const { name,email, phone, location, description, price, category, availableQty, availableDate } = data;
             const newItem = {
                 name,
+                email,
                 price: parseFloat(price),
                 category,
                 phone,
@@ -181,6 +183,19 @@ const AddHotels = () => {
                     <input type="text" placeholder="Hotel Name"
                         {...register("name", { required: true, maxLength: 120 })}
                         className="input input-bordered w-full " />
+                </div>
+
+                <div className="form-control w-full mb-4">
+                    <label className="label">
+                        <span className="label-text font-semibold">email*</span>
+
+                    </label>
+                    <input type="email" placeholder="email"
+                        {...register("email", { required: true, maxLength: 120 })}
+                        className="input input-bordered w-full "
+                        value={user?.email || ""}
+                        />
+
                 </div>
 
 

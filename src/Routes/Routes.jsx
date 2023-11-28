@@ -22,6 +22,9 @@ import BookingTable from "../pages/Dashboard/User_Dashboard/BookingTable";
 import Bookings from "../pages/Dashboard/Admin/bookings";
 import Payment from "../pages/Dashboard/Payment";
 import AddReview from "../pages/Dashboard/User_Dashboard/AddReview";
+import Manage from "../pages/Dashboard/Host_Dashboard/Manage";
+import Destination from "../pages/Destination/Destination";
+
 
 
 
@@ -43,6 +46,13 @@ export const router = createBrowserRouter([
         path: "hotels",
         element: <Hotel></Hotel>,
       },
+  
+      {
+        path: "destination",
+        element: <Destination></Destination>,
+      },
+  
+    
       {
         path: "hotel/:hotelId",
         element: <HotelDetails></HotelDetails>,
@@ -91,6 +101,10 @@ export const router = createBrowserRouter([
       {
         path:'profile',
         element: <MyProfile></MyProfile>
+      },
+      {
+        path:'manages',
+        element: <Manage></Manage>
       },
 
       //admin routes

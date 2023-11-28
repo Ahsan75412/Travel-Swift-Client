@@ -51,12 +51,6 @@ const MyProfile = () => {
                             <p className="text-sm">{user?.email}</p>
                         </div>
                         <div className="space-x-4 py-5">
-                            {/* <a
-                                target="_blank"
-                                href="https://www.linkedin.com/feed/"
-                            >
-                                <button className="fab fa-linkedin btn btn-info text-white btn-xs"></button>
-                            </a> */}
 
                             <a
                                 target="_blank"
@@ -85,18 +79,18 @@ const MyProfile = () => {
                                         More info
                                     </h2>
                                     <div className="text-left font-bold space-y-3">
-                                        <p>
+                                        <p className="flex">
                                             
 
                                             <FaGraduationCap />{" "}
                                             Studied at &nbsp;{info.studyIn}
                                         </p>
-                                        <p>
+                                        <p className="flex">
                                             {/* <i class="fas fa-home"></i> */}
                                             <FaHome />
                                             &nbsp;Lives in {info.livesIn}{" "}
                                         </p>
-                                        <p>
+                                        <p className="flex">
                                             {" "}
                                             {/* <i class="fas fa-phone"></i> */}
                                             <FaPhoneAlt />

@@ -19,6 +19,7 @@ const PopularHotels = () => {
 
     const [hotel] = useHotels();
     const popular = hotel.filter(item => item.category === 'popular');
+    console.log(popular)
 
     return (
         <section>

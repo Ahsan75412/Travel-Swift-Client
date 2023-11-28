@@ -60,8 +60,8 @@ const Dashboard = () => {
                                 <h2>Host</h2>
                                 <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Host Home</NavLink></li>
                                 <li><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils>Add Hotel</NavLink></li>
-                                <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
-                                <li><NavLink to="/dashboard/history"><FaBook></FaBook>Manage Bookings</NavLink></li>
+                                <li><NavLink to="/dashboard/managehotel"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
+
                                 <li><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
                                 <li><NavLink to="/dashboard/profile"><FaUsers></FaUsers>My Profile</NavLink></li>
 
@@ -108,8 +108,8 @@ const Dashboard = () => {
 
                     <div className="divider"></div>
 
-                    <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li>
-                    <li><NavLink to="/hotels"><FaHome></FaHome> Hotels</NavLink></li>
+                    <li><NavLink to="/"><FaHome></FaHome>Home</NavLink></li>
+                    <li><NavLink to="/hotels"><FaHome></FaHome>All Hotels</NavLink></li>
 
                 </ul>
 

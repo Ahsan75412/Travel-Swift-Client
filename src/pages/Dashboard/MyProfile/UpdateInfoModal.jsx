@@ -11,7 +11,6 @@ const UpdateInfoModal = () => {
     const [phn, setPhn] = useState([]);
     const [tweeter, setTweeter] = useState([]);
     const [fb, setFb] = useState([]);
-    // const [git, setGit] = useState([]);
     const [user] = useAuthState(auth);
 
     const onSubmit = (data) => {
@@ -20,7 +19,7 @@ const UpdateInfoModal = () => {
         const updatedPhone = data.phone;
         const updatedFacebook = data.facebook;
         const updatedTweeter = data.Tweeter;
-        // const updatedGithub = data.github;
+    
 
         const bodyData = {
             updatedLivesIn,
@@ -28,7 +27,7 @@ const UpdateInfoModal = () => {
             updatedPhone,
             updatedFacebook,
             updatedTweeter,
-            updatedGithub,
+           
         };
         fetch(
             `http://localhost:5000/info?email=${user.email}`,
@@ -49,23 +48,22 @@ const UpdateInfoModal = () => {
                         updatedNPhone,
                         updatedNFacebook,
                         updatedNTweeter,
-                        // updatedNGithub,
+                    
                     } = {
                         ...lives,
                         ...study,
                         ...phn,
                         ...tweeter,
                         ...fb,
-                        // ...git,
+                        
                     };
                     setLives(updatedNLivesIn);
                     setStudy(updatedNStudyIn);
                     setPhn(updatedNPhone);
                     setTweeter(updatedNTweeter);
                     setFb(updatedNFacebook);
-                    // setGit(updatedNGithub);
+                    
                     reset();
-                    // toast("Updated Successfully", { type: "success" });
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
@@ -167,17 +165,7 @@ const UpdateInfoModal = () => {
                                     className="input input-bordered input-warning w-full "
                                 />
                             </div>
-                            {/* <div>
-                                <label className="label">
-                                    <span className="label-text">Git hub</span>
-                                </label>
-                                <input
-                                    {...register("github")}
-                                    type="text"
-                                    placeholder="Git hub URL"
-                                    className="input input-bordered input-warning w-full "
-                                />
-                            </div> */}
+                      
 
                             <div className="modal-action justify-evenly">
                                 <label

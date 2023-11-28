@@ -24,6 +24,7 @@ const NavBar = () => {
 
 
     <li><Link to="/">Home</Link></li>
+    <li><Link to="/destination">Destination</Link></li>
     <li><Link to="/hotels">Hotels</Link></li>
     <li><Link to="/packages">Packages</Link></li>
 
@@ -78,7 +79,8 @@ const NavBar = () => {
 
   </>
   return (
-    <div className="navbar fixed z-10 top-0 p-5 bg-opacity-50 bg-black text-white">
+    // max-w-screen-xl mx-auto
+    <div className="navbar fixed z-10 top-0 p-5 bg-opacity-50 bg-black text-white ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
