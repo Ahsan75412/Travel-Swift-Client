@@ -24,6 +24,7 @@ import Payment from "../pages/Dashboard/Payment";
 import AddReview from "../pages/Dashboard/User_Dashboard/AddReview";
 import Manage from "../pages/Dashboard/Host_Dashboard/Manage";
 import Destination from "../pages/Destination/Destination";
+import Flights from "../pages/Flights/Flights";
 
 
 
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
       {
         path: "destination",
         element: <Destination></Destination>,
+      },
+      {
+        path: "flights",
+        element: <Flights></Flights>,
       },
   
     

@@ -4,8 +4,35 @@ import { signOut } from 'firebase/auth';
 import Loading from "../Loading/Loading";
 import auth from "../../../firebaseConfig";
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useState, useEffect } from 'react';
+
+
 
 const NavBar = () => {
+
+  // StickyNavbar.js
+
+
+
+  const [isSticky, setIsSticky] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 100) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
 
   const [user, loading, error] = useAuthState(auth);
   const location = useLocation();
@@ -23,10 +50,10 @@ const NavBar = () => {
   const navOptions = <>
 
 
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/destination">Destination</Link></li>
-    <li><Link to="/hotels">Hotels</Link></li>
-    <li><Link to="/packages">Packages</Link></li>
+    <li className='mx-2'><Link to="/">Home</Link></li>
+    <li className="mx-2"><Link to="/destination">Destination</Link></li>
+    <li className="mx-2"><Link to="/hotels">Hotels</Link></li>
+    <li className="mx-2"><Link to="/packages">Packages</Link></li>
 
     {user && (
       <li>
@@ -50,7 +77,7 @@ const NavBar = () => {
       <li>
         {user ? (
           <button
-            className="btn btn-link"
+            className="bg-[#FF9466] text-black uppercase"
             onClick={logout}
           >
             Sign Out
@@ -79,25 +106,29 @@ const NavBar = () => {
 
   </>
   return (
-    // max-w-screen-xl mx-auto
-    <div className="navbar fixed z-10 top-0 p-5 bg-opacity-50 bg-black text-white ">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-          </label>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+    // max-w-screen-xl mx-auto bg-opacity-50
+    <section>
+      <div className={`navbar fixed z-10 top-0 transition-all duration-300 
+    ${isSticky ? 'bg-[#FF9466]' : 'bg-transparent'}`}>
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              {navOptions}
+            </ul>
+          </div>
+          {/* 'text-[#FF9466]' */}
+          <a className="font-bold text-xl md:px-12">Travel-<span className={`${isSticky ? 'text-[#FFFFFF]' : 'text-[#FF9466]'}`} >Swift</span></a>
+        </div>
+        <div className="navbar-center hidden lg:flex ">
+          <ul className="menu menu-horizontal px-1 font-semibold text-base">
             {navOptions}
           </ul>
         </div>
-        <a className="font-bold text-xl">Travel-<span className='text-yellow-500'>Swift</span></a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navOptions}
-        </ul>
-      </div>
-    </div>
+    </section>
   );
 };
 
