@@ -33,28 +33,30 @@ const Category = () => {
                 modules={[Pagination]}
                 className="mySwiper mb-24"
             >
+
+{/* h-[500px] w-[90%] */}
                 <SwiperSlide>
-                    <img src={slide1} className='h-[500px] w-[90%]' alt="" />
-                    <h3 className="text-4xl uppercase text-center -mt-20 text-white">Cox Bazar</h3>
+                    <img src={slide1} className='object-cover content-center sm:h-[250px] md:h-[350px] h-[300px]  sm:w-screen w-full rounded-xl' alt="" />
+                    <h3 className="text-3xl uppercase text-center -mt-20 text-white">Cox Bazar</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide2} className='h-[500px] w-[90%]' alt="" />
-                    <h3 className="text-4xl uppercase text-center -mt-20 text-white ">Syllhet</h3>
+                    <img src={slide2} className='object-cover content-center sm:h-[250px] md:h-[350px] h-[300px]  sm:w-screen w-full rounded-xl' alt="" />
+                    <h3 className="text-3xl uppercase text-center -mt-20 text-white ">Syllhet</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide3} className='h-[500px] w-[90%]' alt="" />
+                    <img src={slide3} className='object-cover content-center sm:h-[250px] md:h-[350px] h-[300px]  sm:w-screen w-full rounded-xl' alt="" />
                     <h3 className="text-4xl uppercase text-center -mt-20  text-white ">Dhaka</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide4} className='h-[500px] w-[90%]' alt="" />
+                    <img src={slide4} className=' object-cover content-center sm:h-[250px] md:h-[350px] h-[300px]  sm:w-screen w-full rounded-xl' alt="" />
                     <h3 className="text-4xl uppercase text-center -mt-20  text-white ">Rajshahi</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide5} className='h-[500px] w-[90%]' alt="" />
+                    <img src={slide5} className='object-cover content-center sm:h-[250px] md:h-[350px] h-[300px]  sm:w-screen w-full rounded-xl' alt="" />
                     <h3 className="text-4xl uppercase text-center -mt-20 text-white ">Chittagong</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide6} className='h-[500px] w-[90%]' alt="" />
+                    <img src={slide6} className='object-cover content-center sm:h-[250px] md:h-[350px] h-[300px]  sm:w-screen w-full rounded-xl' alt="" />
                     <h3 className="text-4xl uppercase text-center -mt-10 text-white ">Khulna</h3>
                 </SwiperSlide>
 

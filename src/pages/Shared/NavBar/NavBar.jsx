@@ -56,7 +56,7 @@ const NavBar = () => {
     <li className="mx-2"><Link to="/packages">Packages</Link></li>
 
     {user && (
-      <li>
+      <li className="mx-2">
         <Link to="/dashboard">Dashboard</Link>
       </li>
 
@@ -64,7 +64,7 @@ const NavBar = () => {
     <li className="block lg:hidden ">
       {user ? (
         <button
-          className="btn btn-link"
+          className="bg-[#FF9466] text-black uppercase mx-2"
           onClick={logout}
         >
           Sign Out

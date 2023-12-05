@@ -50,7 +50,7 @@
 
 import { Link } from 'react-router-dom';
 import Traveling from '../../../assets/Hotels/CoverVideo/Travelling-bg.png'
-import { BsArrowRight } from "react-icons/bs";
+
 
 
 
@@ -59,11 +59,7 @@ const Banner =  () => {
 
 
     return (
-        // <nav
-        // className={`fixed top-0 left-0 w-full p-4 transition-all duration-300 ${
-        //   isSticky ? 'bg-d57352' : 'bg-transparent'
-        // }`}
-        <section className="min-h-screen md:pt-28 py-32 flex lg:items-center lg:justify-center w-screen px-12">
+        <section className="min-h-screen md:pt-28 py-32 flex lg:items-center lg:justify-center w-screen md:px-12">
             <div className="hero-content max-w-full flex-col lg:flex-row">
                 <div className="text-center md:w-[700px] lg:text-left">
                     <p className='uppercase font-semibold text-[#FF9466] pb-5'> Best Destinations In Bangladesh </p>
