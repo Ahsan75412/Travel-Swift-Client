@@ -3,6 +3,7 @@ import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import SingleHotel from '../../Shared/singleHotel/SingleHotel';
 import useHotels from '../../../hooks/useHotels';
 
+
 const PopularHotels = () => {
     // const [hotel , setHotel] = useState([]);
   
@@ -22,13 +23,13 @@ const PopularHotels = () => {
     console.log(popular)
 
     return (
-        <section>
+        <section className='pt-12'>
             <SectionTitle
               heading={"Popular Hotels Deals"}
               subHeading={"Everything You Want & More"}
             ></SectionTitle>
 
-        <div className='grid md:grid-cols-3 gap-4 mb-10 mx-12'>
+        <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-8 pb-16 pt-12 mx-8 '>
 
             {
                 popular.map(item => <SingleHotel

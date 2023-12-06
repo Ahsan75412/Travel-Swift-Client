@@ -55,7 +55,7 @@ const Hotels = () => {
 
                 ></SectionTitle>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-10 lg:px-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 lg:px-20">
                 {location.pathname === "/" || location.pathname === "/home "
                     ? hotels
                         .slice(0, 3)

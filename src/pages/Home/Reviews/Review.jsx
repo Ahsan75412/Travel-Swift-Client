@@ -26,7 +26,7 @@ const Review = () => {
     }, [])
 
     return (
-        <section className="my-20">
+        <section className="my-20 md:mx-8">
             <SectionTitle
                 subHeading="What our client say"
                 heading="Reviews"
@@ -42,7 +42,7 @@ const Review = () => {
                     >
                     
 
-                        <div className=" flex flex-col items-center my-16 mx-24 ">
+                        <div className=" flex flex-col items-center md:my-16 mx-12 sm:mx-16 md:mx-24 ">
                             <Rating
                                 style={{ maxWidth: 180 }}
                                 value={review.rating}
