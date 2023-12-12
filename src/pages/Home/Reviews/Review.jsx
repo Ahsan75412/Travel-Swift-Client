@@ -42,7 +42,7 @@ const Review = () => {
                     >
                     
 
-                        <div className=" flex flex-col items-center md:my-16 mx-12 sm:mx-16 md:mx-24 ">
+                        <div className=" flex flex-col items-center md:my-16 mx-12 sm:mx-16 md:mx-22 ">
                             <Rating
                                 style={{ maxWidth: 180 }}
                                 value={review.rating}

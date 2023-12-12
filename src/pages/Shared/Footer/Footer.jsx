@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container mx-auto flex flex-wrap justify-between">
                 {/* Column 1 */}
                 <div className="w-full md:w-1/2 lg:w-1/3 mb-8 md:mb-0">
-                    <h3 className="text-2xl font-bold mb-4">Digital <span className="text-[#F55F1D]">Agency</span></h3>
+                    <h3 className="text-2xl font-bold mb-4">Travel <span className="text-[#F55F1D]">Swift</span></h3>
                     <p className="mb-4 w-80">Some text about the company. Web logo and social icons can go here.</p>
                     <div className="flex space-x-4">
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">

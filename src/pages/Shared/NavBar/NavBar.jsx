@@ -47,12 +47,31 @@ const NavBar = () => {
   // console.log(user);
 
 
+  const currentPath = location.pathname;
+
+  const isHotelsActive = currentPath === '/hotels';
+  const isDestinationActive = currentPath === '/destination';
+
+  const textColorClass = isHotelsActive || isDestinationActive ? 'text-white' : 'text-[#FF9466]';
+
+
+
+
+
+
   const navOptions = <>
 
 
     <li className='mx-2'><Link to="/">Home</Link></li>
-    <li className="mx-2"><Link to="/destination">Destination</Link></li>
+    <li className="mx-2 "><Link to="/destination">Destination</Link></li>
     <li className="mx-2"><Link to="/hotels">Hotels</Link></li>
+    {/* <li className={`mx-2 ${isHotelsActive ? 'text-white' : textColorClass}`}>
+      <Link to="/hotels">Hotels</Link>
+    </li>
+    <li className={`mx-2 ${isDestinationActive ? 'text-white' : textColorClass}`}>
+      <Link to="/destination">Destination</Link>
+    </li> */}
+    <li className="mx-2"><Link to="/flight">flight</Link></li>
     <li className="mx-2"><Link to="/packages">Packages</Link></li>
 
     {user && (
@@ -110,6 +129,7 @@ const NavBar = () => {
     <section>
       <div className={`navbar fixed z-10 top-0 transition-all duration-300 
     ${isSticky ? 'bg-[#FF9466]' : 'bg-transparent'}`}>
+
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

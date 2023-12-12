@@ -30,6 +30,7 @@ import Flights from "../pages/Flights/Flights";
 
 
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -53,7 +54,7 @@ export const router = createBrowserRouter([
         element: <Destination></Destination>,
       },
       {
-        path: "flights",
+        path: "flight",
         element: <Flights></Flights>,
       },
   

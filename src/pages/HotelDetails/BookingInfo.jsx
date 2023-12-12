@@ -132,7 +132,8 @@ const BookingInfo = () => {
     };
 
 
-
+ 
+    
 
 
     const debounce = (func, wait) => {
@@ -178,12 +179,12 @@ const BookingInfo = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-[#f1fcfe] mb-52">
+            <div className="hero min-h-screen bg-[#f1fcfe] mb-52 ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <img src={dayCoverImg} alt="" />
                     </div>
-                    <div className="card w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card w-full max-w-sm shadow-2xl bg-base-100 md:my-36">
                         <div className="card-body">
                             <Appointment date={date} setDate={setDate} ranges={dateRange}></Appointment>
                             <label htmlFor="my-modal-6" className="btn btn-primary">
@@ -265,8 +266,8 @@ const BookingInfo = () => {
                                     {...register("date")}
                                     type="text"
                                     placeholder="Your Selection Date"
-                                    // value={format(date[0].startDate, 'MM/dd/yyyy') }
-                                    // value={`${format(date[0].startDate, 'dd/MM/yyyy')} - ${format(date[0].endDate, 'dd/MM/yyyy')}`}
+                                  
+
 
                                     value={`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(
                                         date[0].endDate,

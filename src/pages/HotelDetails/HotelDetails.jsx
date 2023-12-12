@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
-
-import {  useParams , useNavigate  } from "react-router-dom";
-
+import { useParams, useNavigate } from "react-router-dom";
 import HotelShow from "../../components/hotelShow/hotelShow";
 import { VscLocation } from "react-icons/vsc";
+import { MdOutlineDescription } from "react-icons/md";
+import { MdOutlineEventAvailable } from "react-icons/md";
+import { IoPricetagsOutline } from "react-icons/io5";
+
+
+
 
 
 
@@ -14,7 +18,7 @@ const HotelDetails = () => {
     const { hotelId } = useParams();
 
     const [hotel, setHotel] = useState({});
-   
+
     const [loading, setLoading] = useState(true);
     const [quantity, setQuantity] = useState("");
     const navigate = useNavigate(); // Use 'useNavigate' from 'react-router-dom'
@@ -47,26 +51,26 @@ const HotelDetails = () => {
                 setLoading(false);
             }
         };
-    
+
         fetchData();
     }, []);
-    
+
 
     const handleBookNow = () => {
         // Navigate to BookingInfo with props
         navigate(`/booking`, { state: { hotel } });
-       
+
     };
 
     return (
-        <div className="mt-[140px] p-5  ">
+        <div className="mt-[140px] p-5 md:px-8 pb-24">
             <div className="lg:flex">
                 <div className="item-center lg:w-1/2">
                     <HotelShow></HotelShow>
                 </div>
 
             </div>
-            <div className="card bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl py-5">
 
                 {/* <figure className="lg:w-1/2 md:w-5 p-5"></figure> */}
                 <div className="card-body">
@@ -76,18 +80,30 @@ const HotelDetails = () => {
                             <VscLocation></VscLocation>
                         </div>
                         <div>
-                            <p className='-mt-1'>{hotel.location}</p>
+                            <p className='-mt-1 font-medium'>{hotel.location}</p>
                         </div>
                     </div>
-                    <p className="ml-2 ">{hotel.description}</p>
-                    <p className="ml-2 ">Available-Rooms: {hotel.availableQty}</p>
+                    <div className='flex'>
+                        <MdOutlineDescription className="w-8 mt-1"></MdOutlineDescription>
+                        <p className="ml-2 ">{hotel.description}</p>
+                    </div>
 
-                    <p className=" font-bold pb-5 ml-2">Price: ${hotel.price} /night</p>
+                    <div className="flex">
+                        <MdOutlineEventAvailable className=" mt-1"></MdOutlineEventAvailable>
+                        <p className="ml-2 font-semibold">Available-Rooms: {hotel.availableQty}</p>
+                    </div>
+
+                    <div className="flex">
+                        <IoPricetagsOutline className=" mt-1"></IoPricetagsOutline>
+                        <p className=" font-bold pb-5 ml-2">Price: ${hotel.price} /night</p>
+
+                    </div>
+
 
                     <div className="card-actions">
-                        <p className="btn btn-outline btn-secondary font-bold text-black" onClick={handleBookNow}>
+                        <button className="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-[#FF9466] hover:bg-[#d57352] text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200  " onClick={handleBookNow}>
                             Book Now
-                        </p>
+                        </button>
                     </div>
                 </div>
             </div>
