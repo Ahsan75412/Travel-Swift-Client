@@ -47,6 +47,9 @@ const Dashboard = () => {
                                 {/* Admin side bar content here */}
                                 <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
                                 <li><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils> Add an Hotel</NavLink></li>
+
+                                <li><NavLink to="/dashboard/addservice"><FaUtensils></FaUtensils> Add an Service</NavLink></li>
+
                                 <li><NavLink to="/dashboard/managehotel"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
                                 <li><NavLink to="/dashboard/history"><FaBook></FaBook>Manage Bookings</NavLink></li>
                                 <li><NavLink to="/dashboard/bookings"><FaBook></FaBook>All Bookings</NavLink></li>

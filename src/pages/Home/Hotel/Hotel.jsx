@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // name, location,, description, price 
 
 const Hotel = ({ hotel, children }) => {
-    const { image = [], name } = hotel;
+    const { image = [] } = hotel;
     return (
         // card w-full bg-gray-50 shadow-xl border 
         <div>

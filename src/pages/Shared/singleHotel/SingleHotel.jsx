@@ -5,7 +5,7 @@ const SingleHotel = ({ item }) => {
   const { name, image, price, location } = item;
   return (
     <section className="transition-transform transform hover:scale-105">
-      <div className="card card-side bg-base-100 shadow-xl  ">
+      <div className="card card-side bg-base-100 shadow-xl">
         <figure>
           <img className="w-[150px] h-[100px] object-cover rounded-xl mx-3 " src={image} alt="album" />
         </figure>

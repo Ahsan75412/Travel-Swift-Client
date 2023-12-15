@@ -65,13 +65,21 @@ const NavBar = () => {
     <li className='mx-2'><Link to="/">Home</Link></li>
     <li className="mx-2 "><Link to="/destination">Destination</Link></li>
     <li className="mx-2"><Link to="/hotels">Hotels</Link></li>
-    {/* <li className={`mx-2 ${isHotelsActive ? 'text-white' : textColorClass}`}>
-      <Link to="/hotels">Hotels</Link>
+    <li>
+      <details>
+        <summary>
+          Services
+        </summary>
+        <ul className=" bg-base-100 rounded-t-none w-40">
+          <li className="mx-2"><Link to="/flight">flight</Link></li>
+          <li className="mx-2 "><Link to="/tourGuid">Tour Guid</Link></li>
+          <li className="mx-2 "><Link to="/rentalCars">Car Rental</Link></li>
+          <li className="mx-2 "><Link to="/allServices">All Services</Link></li>
+          <li className="mx-2 "><Link to="/blog">Blog</Link></li>
+
+        </ul>
+      </details>
     </li>
-    <li className={`mx-2 ${isDestinationActive ? 'text-white' : textColorClass}`}>
-      <Link to="/destination">Destination</Link>
-    </li> */}
-    <li className="mx-2"><Link to="/flight">flight</Link></li>
     <li className="mx-2"><Link to="/packages">Packages</Link></li>
 
     {user && (
