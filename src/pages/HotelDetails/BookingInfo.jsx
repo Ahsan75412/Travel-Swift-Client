@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { useLocation } from 'react-router-dom';
 import dayCoverImg from '../../assets/Hotels/Booking/booking.png';
 import axios from 'axios';
-
+import Swal from "sweetalert2";
 
 const BookingInfo = () => {
 
@@ -121,6 +121,13 @@ const BookingInfo = () => {
         axios.post("http://localhost:5000/orders", data)
             .then((res) => {
                 if (res.data.insertedId) {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Item added Successfully!',
+                        showConfirmButton: false,
+                        timer: 1500,
+                    });
                     alert("Room added to my order");
                     reset();
                     (`${parseInt(hotel.availableQty) - quantityRef.current.value}`);

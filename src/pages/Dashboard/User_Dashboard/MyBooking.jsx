@@ -76,7 +76,7 @@ const MyBooking = () => {
     
     return (
         <div>
-            <h1>my order</h1>
+            {/* <h1>my order</h1> */}
             {MyBooking.map((order) => (
                 <OrderCard key={order._id} hotel={order}>
                     {order.paid ? (

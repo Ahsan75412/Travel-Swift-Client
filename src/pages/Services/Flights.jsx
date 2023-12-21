@@ -2,13 +2,23 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import useServices from '../../hooks/useServices';
 import travel2 from '../../assets/Hotels/CoverVideo/travel2.png';
 import { Link } from 'react-router-dom';
-
+// import { useState } from 'react';
+import ServicesForm from './ServicesForm';
+// import { useParams, useNavigate } from "react-router-dom";
 
 const Flights = () => {
-
   const [services] = useServices();
+  // const navigate = useNavigate();
 
   const service = services.filter(item => item.category === 'Flight');
+
+
+//   const handleBookNow = () => {
+//     // Navigate to BookingInfo with props
+//     navigate(`/serviceForm`, { state: { services } });
+
+// };
+
 
 
   return (
@@ -54,13 +64,24 @@ const Flights = () => {
         subHeading={"Everything You Want & More"}
       ></SectionTitle>
 
-      <div className='grid md:grid-cols-1 sm:grid-cols-2 gap-8 pb-16 pt-12 mx-8 '>
+      <div className='grid md:grid-cols-1  gap-8 pb-16 pt-12  '>
 
         {
-          service.map((item, i) => {
+          service.map((item, i ) => {
             return (
-              <section key={i.toString()} className="">
-                <h1>{item.name}</h1>
+              <section key={i.toString()} className="mx-12">
+
+                <div className="card card-side bg-base-100 shadow-xl p-5">
+                  <figure><img className='' src={item.img} alt="image" /></figure>
+                  <div className="card-body">
+                    <h2 className="card-title">{item.name}</h2>
+                    <p>{item.description}</p>
+
+                    <div className="card-actions justify-end">
+                    <ServicesForm item={item} />   
+                    </div>
+                  </div>
+                </div>
               </section>
             )
           })

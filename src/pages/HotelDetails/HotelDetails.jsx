@@ -101,7 +101,7 @@ const HotelDetails = () => {
 
 
                     <div className="card-actions">
-                        <button className="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-[#FF9466] hover:bg-[#d57352] text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200  " onClick={handleBookNow}>
+                        <button className="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-[#FF9466] hover:bg-[#d57352] text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" onClick={handleBookNow}>
                             Book Now
                         </button>
                     </div>

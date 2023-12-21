@@ -26,6 +26,9 @@ import Manage from "../pages/Dashboard/Host_Dashboard/Manage";
 import Destination from "../pages/Destination/Destination";
 import AddServices from "../pages/Dashboard/Admin/AddServices";
 import Flights from "../pages/Services/Flights";
+import ServicesForm from "../pages/Services/ServicesForm";
+import Cars from "../pages/Services/Cars";
+import Guid from "../pages/Services/Guid";
 
 
 
@@ -57,6 +60,19 @@ export const router = createBrowserRouter([
       {
         path: "flight",
         element: <Flights></Flights>,
+      },
+      {
+        path: "rentalCars",
+        element: <Cars></Cars>,
+      },
+      {
+        path: "tourGuid",
+        element: <Guid></Guid>,
+      },
+  
+      {
+        path: "serviceForm",
+        element: <ServicesForm></ServicesForm>,
       },
   
     
