@@ -90,7 +90,7 @@ console.log(item.name)
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="card-actions justify-end">
-                <label htmlFor="my-modal-6" className="btn btn-warning font-bold">
+                <label htmlFor="my-modal-6" className="btn btn-warning bg-[#FF9466] font-bold">
                     Book Now
                 </label>
 

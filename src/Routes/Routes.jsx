@@ -6,10 +6,9 @@ import Home from "../pages/Home/Home/Home";
 // import Hotels from "../pages/Hotels/allHotels/Hotels";
 import Login from "../pages/Account/Login";
 import SignUp from "../pages/Account/SignUp";
-import Hotels from "../pages/Home/Hotels/Hotels";
+// import Hotels from "../pages/Home/Hotels/Hotels";
 import HotelDetails from "../pages/HotelDetails/HotelDetails";
 import Hotel from "../pages/Hotel/Hotel";
-import { ToastContainer } from "react-toastify";
 import BookingInfo from "../pages/HotelDetails/BookingInfo";
 import Dashboard from "../Layout/Dashboard";
 import Users from "../pages/Dashboard/AllUsers/Users";
@@ -29,6 +28,7 @@ import Flights from "../pages/Services/Flights";
 import ServicesForm from "../pages/Services/ServicesForm";
 import Cars from "../pages/Services/Cars";
 import Guid from "../pages/Services/Guid";
+import AllServices from "../pages/Services/AllServices";
 
 
 
@@ -68,6 +68,10 @@ export const router = createBrowserRouter([
       {
         path: "tourGuid",
         element: <Guid></Guid>,
+      },
+      {
+        path: "allServices",
+        element: <AllServices></AllServices>,
       },
   
       {

@@ -7,8 +7,7 @@ import Cover from '../Cover/Cover';
 const SemiCover = () => {
     return (
         <div>
-            <Cover img={hotelImg} title="Book hotel"></Cover>
-            
+            <Cover img={hotelImg} title="Book hotel"></Cover>  
         </div>
     );
 };

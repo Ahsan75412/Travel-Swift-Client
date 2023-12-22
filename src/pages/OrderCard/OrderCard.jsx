@@ -1,30 +1,31 @@
+
+
+
+
 import React from "react";
 
-const OrderCard = ({ children, hotel }) => {
-    const { hotelName, category, description, quantity, price, image, email } =
-        hotel;
+const OrderCard = ({ children, order }) => {
+    const { img, name,hotel_img,hotelName, category, details, travelers, price, email } = order;
+
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl m-20">
-            <figure>
-                <img className="w-[250px]" src={image} alt="Album" />
+        <div className="card lg:card-side bg-base-100 shadow-xl md:w-[750px] mt-10">
+              <figure>
+                {/* Use img if it exists, otherwise use image */}
+                <img className="md:w-[600px] h-[300px] rounded-xl" src={img || hotel_img} alt="Order" />
             </figure>
-            {/* //TODO:ekhn er sob nam ba email er samne react icon use korbo  */}
             <div className="card-body flex flex-col">
                 <div>
-                    <h2 className="card-title text-3xl">{hotelName}</h2>
+                    <h2 className="card-title text-3xl">{hotelName || name }</h2>
                     <p>
                         {" "}
                         <span className="font-bold">Category:</span> {category}
                     </p>
                     <p>
-                        <span className="font-bold">Details:</span>
-                        {description}
+                        <span className="font-bold">Details:</span> {details}
                     </p>
                     <p>
-                        <span className="font-bold">Quantity: </span>
-                        {quantity}
+                        <span className="font-bold">Travelers: </span> {travelers}
                     </p>
-
                     <p>
                         <span className="font-bold">Price:</span> ${price}
                     </p>
