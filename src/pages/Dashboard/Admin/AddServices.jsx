@@ -113,9 +113,9 @@ const AddServices = () => {
                                 {...register("name")}
                             />
                         </div>
-                     
 
-                  
+
+
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Start Destination </span>
@@ -151,7 +151,7 @@ const AddServices = () => {
                                 {...register("location")}
                             />
                         </div>
-                   
+
 
 
 

@@ -106,3 +106,12 @@ const Hotel = ({ hotel, children }) => {
 
 export default Hotel;
 
+
+
+
+
+
+
+
+
+

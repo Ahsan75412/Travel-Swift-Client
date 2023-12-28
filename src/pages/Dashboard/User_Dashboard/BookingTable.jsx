@@ -59,12 +59,12 @@ const BookingTable = () => {
                                     <th>{index + 1}</th>
                                     <td>{order.name}</td>
                                     <td>{order.hotelName}</td>
-                                    <td>{order.quantity}</td>
+                                    <td>{order.quantity || 1}</td>
                                     <td>${order.price}</td>
 
                                     <td>
                                         {order.price && !order.paid && (
-                                            <Link to={`/dashboard/mybookings`}>
+                                            <Link to={`/dashboard/mybooking`}>
                                                 <button className="btn btn-xs btn-success">
                                                     Pay Now
                                                 </button>

@@ -237,7 +237,7 @@ console.log(item.name)
                                 <span className="label-text">Phone number</span>
                             </label>
                             <input
-                                {...register(" phone")}
+                                {...register("phone")}
                                 type="text"
                                 placeholder="Phone"
                                 className="input input-bordered input-warning w-full "

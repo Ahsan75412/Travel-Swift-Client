@@ -1,7 +1,7 @@
-
 import React, { useEffect, useState } from "react";
-import OrderCard from "../../OrderCard/OrderCard";
+
 import Swal from "sweetalert2";
+import OrderCards from "../../OrderCard/OrderCards";
 
 
 
@@ -75,7 +75,7 @@ const Bookings = () => {
             )}
 
             {bookings.map((order, index) => (
-                <OrderCard key={order._id} order={order}>
+                <OrderCards key={order._id} order={order}>
                     <div>
                         <div className="flex">
                             <p>
@@ -104,10 +104,13 @@ const Bookings = () => {
                             <i className="far fa-trash-alt"></i> &nbsp;Delete Order
                         </button>
                     </div>
-                </OrderCard>
+                </OrderCards>
             ))}
         </div>
     );
 };
 
 export default Bookings;
+
+
+

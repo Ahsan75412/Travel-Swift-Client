@@ -29,6 +29,11 @@ import ServicesForm from "../pages/Services/ServicesForm";
 import Cars from "../pages/Services/Cars";
 import Guid from "../pages/Services/Guid";
 import AllServices from "../pages/Services/AllServices";
+import HostRequest from "../pages/Dashboard/User_Dashboard/HostRequest";
+import AddBlog from "../pages/Dashboard/Admin/AddBlog";
+import Blog from "../pages/Blog/blog";
+import BlogDetail from "../pages/Blog/blogDetail";
+import ManageServices from "../pages/Dashboard/Admin/ManageServices";
 
 
 
@@ -78,6 +83,14 @@ export const router = createBrowserRouter([
         path: "serviceForm",
         element: <ServicesForm></ServicesForm>,
       },
+      {
+        path: "blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "blog/:id",
+        element: <BlogDetail></BlogDetail>,
+      },
   
     
       {
@@ -126,12 +139,20 @@ export const router = createBrowserRouter([
         element: <ManageHotels></ManageHotels>
       },
       {
+        path:'manageservices',
+        element: <ManageServices></ManageServices>
+      },
+      {
         path:'bookings',
         element: <Bookings></Bookings>
       },
       {
         path:'profile',
         element: <MyProfile></MyProfile>
+      },
+      {
+        path:'addBlog',
+        element: <AddBlog></AddBlog>
       },
       {
         path:'manages',
@@ -150,6 +171,10 @@ export const router = createBrowserRouter([
       {
         path: 'mybooking',
         element: <MyBooking></MyBooking>,
+      },
+      {
+        path: 'hostrequest',
+        element: <HostRequest></HostRequest>,
       },
       {
         path: 'bookingtable',

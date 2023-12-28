@@ -17,7 +17,7 @@ const BookingInfo = () => {
 
     const { hotel } = state || {};
 
-    console.log(hotel.price)
+
 
 
     const getSelectedDays = () => {
@@ -128,7 +128,7 @@ const BookingInfo = () => {
                         showConfirmButton: false,
                         timer: 1500,
                     });
-                    alert("Room added to my order");
+                    // alert("Room added to my order");
                     reset();
                     (`${parseInt(hotel.availableQty) - quantityRef.current.value}`);
                 }

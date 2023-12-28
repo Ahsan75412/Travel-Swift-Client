@@ -82,7 +82,7 @@ const Banner =  () => {
                     <div className="flex lg:flex-row">
                         <div>
                             <img
-                                className='w-[408px] h-[271px] px-3 rounded-xl'
+                                className='  px-3 rounded-xl'
                                 src={Traveling}
                                 alt="hero"
                             />

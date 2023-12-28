@@ -53,7 +53,8 @@ const Dashboard = () => {
                                 <li className="font-semibold"><NavLink to="/dashboard/addservice"><FaUtensils></FaUtensils> Add an Service</NavLink></li>
 
                                 <li className="font-semibold"><NavLink to="/dashboard/managehotel"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
-                                <li className="font-semibold"><NavLink to="/dashboard/history"><FaBook></FaBook>Manage Bookings</NavLink></li>
+                                <li className="font-semibold"><NavLink to="/dashboard/manageservices"><FaWallet></FaWallet>Manage Services</NavLink></li>
+                                <li className="font-semibold"><NavLink to="/dashboard/addBlog"><FaBook></FaBook>Write Blog</NavLink></li>
                                 <li className="font-semibold"><NavLink to="/dashboard/bookings"><FaBook></FaBook>Bookings</NavLink></li>
                                 <li className="font-semibold"><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
                                 <li className="font-semibold"><NavLink to="/dashboard/profile"><FaUsers></FaUsers>My Profile</NavLink></li>
@@ -83,6 +84,9 @@ const Dashboard = () => {
 
                                     <li className="font-semibold"><NavLink to="/dashboard/addreview"><FaCalendar></FaCalendar>
                                         Add Review</NavLink></li>
+
+                                    <li className="font-semibold"><NavLink to="/dashboard/hostrequest"><FaCalendar></FaCalendar>
+                                        Host Request</NavLink></li>
 
                                     <li className="font-semibold"><NavLink to="/dashboard/profile"><FaWallet></FaWallet>My Profile</NavLink></li>
 

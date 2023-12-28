@@ -10,8 +10,6 @@ import OrderCard from "../../OrderCard/OrderCard";
 
 
 
-
-
 const MyBooking = () => {
     const [user, loading] = useAuthState(auth);
 
