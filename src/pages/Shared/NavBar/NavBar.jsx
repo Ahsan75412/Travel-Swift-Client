@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 
 const NavBar = () => {
 
-  // StickyNavbar.js
+
 
 
 
@@ -80,11 +80,11 @@ const NavBar = () => {
         </ul>
       </details>
     </li>
-    <li className="mx-2"><Link to="/packages">Packages</Link></li>
+    <li className="mx-2"><Link to="/contact">Contact</Link></li>
 
     {user && (
       <li className="mx-2">
-        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/adminhome">Dashboard</Link>
       </li>
 
     )}

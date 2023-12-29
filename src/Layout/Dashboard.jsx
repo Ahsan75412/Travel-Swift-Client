@@ -45,18 +45,34 @@ const Dashboard = () => {
 
                             <>
 
-                                <h2 className="w-full text-center font-bold text-3xl bg-slate-900 text-white p-2 uppercase rounded-xl">Admin</h2>
+                                <h2 className="w-full text-center font-bold text-3xl bg-slate-900 text-white p-2 uppercase rounded-xl mb-5">Admin</h2>
                                 {/* Admin side bar content here */}
                                 <li className="font-semibold"><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/reqhost"><FaHome></FaHome>Host Requests</NavLink></li>
+
                                 <li className="font-semibold"><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils> Add an Hotel</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/managehotel"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
+
+                                {/* <li className="font-semibold"><NavLink to="/dashboard/packages"><FaUtensils></FaUtensils>Packages</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/manager"><FaUtensils></FaUtensils>Package Manager</NavLink></li> */}
 
                                 <li className="font-semibold"><NavLink to="/dashboard/addservice"><FaUtensils></FaUtensils> Add an Service</NavLink></li>
 
-                                <li className="font-semibold"><NavLink to="/dashboard/managehotel"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
+                                
                                 <li className="font-semibold"><NavLink to="/dashboard/manageservices"><FaWallet></FaWallet>Manage Services</NavLink></li>
+
+                           
+
+
                                 <li className="font-semibold"><NavLink to="/dashboard/addBlog"><FaBook></FaBook>Write Blog</NavLink></li>
+
                                 <li className="font-semibold"><NavLink to="/dashboard/bookings"><FaBook></FaBook>Bookings</NavLink></li>
+
                                 <li className="font-semibold"><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
+
                                 <li className="font-semibold"><NavLink to="/dashboard/profile"><FaUsers></FaUsers>My Profile</NavLink></li>
 
 

@@ -313,7 +313,7 @@ const AddHotels = () => {
                     {/* Add the 'multiple' attribute to allow selecting multiple files */}
                 </div>
 
-                <input className="btn btn-sm my-4" type="submit" value="Add Hotel"></input>
+                <input className="btn btn-sm my-4 bg-[#FF9466]" type="submit" value="Add Hotel"></input>
 
 
 

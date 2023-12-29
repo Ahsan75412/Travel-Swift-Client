@@ -34,6 +34,8 @@ import AddBlog from "../pages/Dashboard/Admin/AddBlog";
 import Blog from "../pages/Blog/blog";
 import BlogDetail from "../pages/Blog/blogDetail";
 import ManageServices from "../pages/Dashboard/Admin/ManageServices";
+import ManageHostRequests from "../pages/Dashboard/Admin/ManageHostRequests";
+import AddPackages from "../pages/Dashboard/Admin/AddPackages";
 
 
 
@@ -135,12 +137,20 @@ export const router = createBrowserRouter([
         element: <AddServices></AddServices>
       },
       {
+        path:'packages',
+        element: <AddPackages></AddPackages>
+      },
+      {
         path:'managehotel',
         element: <ManageHotels></ManageHotels>
       },
       {
         path:'manageservices',
         element: <ManageServices></ManageServices>
+      },
+      {
+        path:'reqhost',
+        element: <ManageHostRequests></ManageHostRequests>
       },
       {
         path:'bookings',
