@@ -6,6 +6,22 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebaseConfig";
 import useHost from "../hooks/useHost";
 import { signOut } from "firebase/auth";
+import { MdManageAccounts, MdMiscellaneousServices, MdOutlineAddBusiness, MdOutlineMiscellaneousServices, MdRequestPage } from "react-icons/md";
+import { HiViewGridAdd } from "react-icons/hi";
+import { TfiWrite } from "react-icons/tfi";
+import { MdBookmarkAdded } from "react-icons/md";
+import { RiProfileFill } from "react-icons/ri";
+import { LiaHotelSolid } from "react-icons/lia";
+import { FaTableList } from "react-icons/fa6";
+import { VscPreview } from "react-icons/vsc";
+import { GrHostMaintenance } from "react-icons/gr";
+
+
+
+
+
+
+
 
 
 
@@ -27,9 +43,9 @@ const Dashboard = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-center">
                 {/* Page content here */}
-              
+
                 <label htmlFor="my-drawer-2" className="btn btn-warning bg-[#FF9466] drawer-button lg:hidden mt-5">Open Dashboard</label>
-                
+
                 <Outlet></Outlet>
 
             </div>
@@ -47,64 +63,71 @@ const Dashboard = () => {
 
                                 <h2 className="w-full text-center font-bold text-3xl bg-slate-900 text-white p-2 uppercase rounded-xl mb-5">Admin</h2>
                                 {/* Admin side bar content here */}
-                                <li className="font-semibold"><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
+                                <li className="font-semibold"><NavLink to="/dashboard/adminhome"><FaHome className="text-xl"></FaHome>Admin Home</NavLink></li>
 
-                                <li className="font-semibold"><NavLink to="/dashboard/reqhost"><FaHome></FaHome>Host Requests</NavLink></li>
+                                <li className="font-semibold"><NavLink to="/dashboard/reqhost"><MdRequestPage className="text-xl" />Host Requests</NavLink></li>
 
-                                <li className="font-semibold"><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils> Add an Hotel</NavLink></li>
+                                <li className="font-semibold"><NavLink to="/dashboard/addhotels"><MdOutlineAddBusiness className="text-xl" />Add an Hotel</NavLink></li>
 
-                                <li className="font-semibold"><NavLink to="/dashboard/managehotel"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
+                                <li className="font-semibold"><NavLink to="/dashboard/managehotel"><MdManageAccounts className="text-xl" />Manage Hotels</NavLink></li>
 
                                 {/* <li className="font-semibold"><NavLink to="/dashboard/packages"><FaUtensils></FaUtensils>Packages</NavLink></li>
 
                                 <li className="font-semibold"><NavLink to="/dashboard/manager"><FaUtensils></FaUtensils>Package Manager</NavLink></li> */}
 
-                                <li className="font-semibold"><NavLink to="/dashboard/addservice"><FaUtensils></FaUtensils> Add an Service</NavLink></li>
-
-                                
-                                <li className="font-semibold"><NavLink to="/dashboard/manageservices"><FaWallet></FaWallet>Manage Services</NavLink></li>
-
-                           
+                                <li className="font-semibold"><NavLink to="/dashboard/addservice"><HiViewGridAdd className="text-xl" /> Add an Service</NavLink></li>
 
 
-                                <li className="font-semibold"><NavLink to="/dashboard/addBlog"><FaBook></FaBook>Write Blog</NavLink></li>
+                                <li className="font-semibold"><NavLink to="/dashboard/manageservices"><MdMiscellaneousServices className="text-xl" /> Manage Services</NavLink></li>
 
-                                <li className="font-semibold"><NavLink to="/dashboard/bookings"><FaBook></FaBook>Bookings</NavLink></li>
 
-                                <li className="font-semibold"><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
 
-                                <li className="font-semibold"><NavLink to="/dashboard/profile"><FaUsers></FaUsers>My Profile</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/addBlog"><TfiWrite className="text-xl" />Write Blog</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/bookings"><MdBookmarkAdded className="text-xl" />Bookings</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/users"><FaUsers className="text-xl"></FaUsers>All Users</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/profile"><RiProfileFill className="text-xl" />My Profile</NavLink></li>
 
 
                             </>
                         ) : host ?
                             <>
                                 <h2 className="w-full text-center font-bold text-3xl bg-slate-900 text-white p-2 uppercase rounded-xl">Host</h2>
-                                <li className="font-semibold"><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Host Home</NavLink></li>
-                                <li className="font-semibold"><NavLink to="/dashboard/addhotels"><FaUtensils></FaUtensils>Add Hotel</NavLink></li>
-                                <li className="font-semibold"><NavLink to="/dashboard/managehotel"><FaWallet></FaWallet>Manage Hotels</NavLink></li>
 
-                                <li className="font-semibold"><NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink></li>
-                                <li className="font-semibold"><NavLink to="/dashboard/profile"><FaUsers></FaUsers>My Profile</NavLink></li>
+                                <li className="font-semibold mt-5"><NavLink to="/dashboard/adminhome"><FaHome className="text-xl"></FaHome>Host Home</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/addhotels"><MdOutlineAddBusiness className="text-xl" />Add Hotel</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/addservice"><HiViewGridAdd className="text-xl" /> Add an Service</NavLink></li>
+
+
+                                <li className="font-semibold"><NavLink to="/dashboard/users"><FaUsers className="text-xl"></FaUsers>All Users</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/profile"><RiProfileFill className="text-xl" />My Profile</NavLink></li>
 
                             </> : (
                                 <>
 
                                     {/* User side bar content here */}
                                     <h2 className="w-full text-center font-bold text-3xl bg-slate-900 text-white p-2 uppercase rounded-xl">user</h2>
-                                    <li className="font-semibold mt-5 "><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
+                                    <li className="font-semibold mt-5 "><NavLink to="/dashboard/adminhome"><FaHome className="text-xl"></FaHome>User Home</NavLink></li>
 
-                                    <li className="font-semibold"><NavLink to="/dashboard/mybooking"><FaCalendar></FaCalendar>My Booking</NavLink></li>
+                                    <li className="font-semibold"><NavLink to="/dashboard/mybooking"><MdBookmarkAdded className="text-xl" />My Booking</NavLink></li>
 
-                                    <li className="font-semibold"><NavLink to="/dashboard/bookingtable"><FaCalendar></FaCalendar>Booking Table</NavLink></li>
+                                    <li className="font-semibold"><NavLink to="/dashboard/bookingtable"><FaTableList className="text-xl" />Booking Table</NavLink></li>
 
-                                    <li className="font-semibold"><NavLink to="/dashboard/addreview"><FaCalendar></FaCalendar>
+                                    <li className="font-semibold"><NavLink to="/dashboard/addreview"><VscPreview className="text-xl" />
                                         Add Review</NavLink></li>
 
-                                    <li className="font-semibold"><NavLink to="/dashboard/hostrequest"><FaCalendar></FaCalendar>
+                                    <li className="font-semibold"><NavLink to="/dashboard/hostrequest"><GrHostMaintenance className="text-xl" />
                                         Host Request</NavLink></li>
 
-                                    <li className="font-semibold"><NavLink to="/dashboard/profile"><FaWallet></FaWallet>My Profile</NavLink></li>
+                                    <li className="font-semibold"><NavLink to="/dashboard/addBlog"><TfiWrite className="text-xl" />Write Blog</NavLink></li>
+
+                                    <li className="font-semibold"><NavLink to="/dashboard/profile"><RiProfileFill className="text-xl" />My Profile</NavLink></li>
 
                                     {/* <li>
                                 <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart
@@ -133,14 +156,14 @@ const Dashboard = () => {
 
                     <div className="divider"></div>
 
-                    <li className="font-semibold"><NavLink to="/"><FaHome></FaHome> Main Home</NavLink></li>
-                    <li className="font-semibold"><NavLink to="/hotels"><FaHome></FaHome>All Hotels</NavLink></li>
-                    <li className="font-semibold"><NavLink to="/allServices"><FaHome></FaHome>Services</NavLink></li>
+                    <li className="font-semibold"><NavLink to="/"><FaHome className="text-xl"></FaHome> Main Home</NavLink></li>
+                    <li className="font-semibold"><NavLink to="/hotels"><LiaHotelSolid className="text-xl" />All Hotels</NavLink></li>
+                    <li className="font-semibold"><NavLink to="/allServices"><MdOutlineMiscellaneousServices className="text-xl" />Services</NavLink></li>
 
                 </ul>
 
             </div>
-        </div> 
+        </div>
     );
 };
 

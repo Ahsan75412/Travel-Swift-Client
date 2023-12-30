@@ -55,7 +55,7 @@ const SignUp = () => {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-screen pt-28">
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Sign Up</h2>
@@ -151,7 +151,7 @@ const SignUp = () => {
                         </div>
                         {signInError}
                         <input
-                            className="btn  btn-secondary w-full"
+                            className="btn  btn-neutral w-full"
                             type="submit"
                             value="SIGNUP"
                         />
@@ -160,7 +160,7 @@ const SignUp = () => {
                         <small>
                             Already have an account?{" "}
                             <Link
-                                className="text-secondary font-bold"
+                                className="text-[#FF9466] font-bold"
                                 to="/login"
                             >
                                 Please Login
@@ -170,7 +170,7 @@ const SignUp = () => {
                     <div className="divider">Or</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline btn-secondary"
+                        className="btn btn-outline"
                     >
                         Continue with Google
                     </button>

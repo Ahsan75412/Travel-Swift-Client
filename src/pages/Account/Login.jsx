@@ -126,16 +126,16 @@ const Login = () => {
                         </div>
                         {signInError}
                         <input
-                            className="btn  btn-secondary w-full"
+                            className="btn btn-neutral  w-full"
                             type="submit"
                             value="Login"
                         />
                     </form>
                     <p>
                         <small>
-                            New to Auto Zone?{" "}
+                            New to travel-swift?{" "}
                             <Link
-                                className="text-secondary font-bold"
+                                className="text-[#FF9466] font-bold"
                                 to="/signup"
                             >
                                 Create New Account
@@ -145,7 +145,7 @@ const Login = () => {
                     <div className="divider">Or</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline btn-secondary"
+                        className="btn btn-outline "
                     >
                         Continue with Google
                     </button>

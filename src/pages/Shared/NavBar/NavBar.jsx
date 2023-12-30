@@ -80,11 +80,11 @@ const NavBar = () => {
         </ul>
       </details>
     </li>
-    <li className="mx-2"><Link to="/contact">Contact</Link></li>
+    <li className="mx-2"><Link to="/subscribe">Subscribe</Link></li>
 
     {user && (
       <li className="mx-2">
-        <Link to="/adminhome">Dashboard</Link>
+        <Link to="/dashboard/adminhome">Dashboard</Link>
       </li>
 
     )}

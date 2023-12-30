@@ -36,6 +36,7 @@ import BlogDetail from "../pages/Blog/blogDetail";
 import ManageServices from "../pages/Dashboard/Admin/ManageServices";
 import ManageHostRequests from "../pages/Dashboard/Admin/ManageHostRequests";
 import AddPackages from "../pages/Dashboard/Admin/AddPackages";
+import SubscribeMain from "../pages/Home/subscribe/SubscribeMain";
 
 
 
@@ -51,10 +52,10 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      // {
-      //     path: "",
-      //     element: <Hotels></Hotels>,
-      // },
+      {
+          path: "subscribe",
+          element: <SubscribeMain></SubscribeMain>,
+      },
       {
         path: "hotels",
         element: <Hotel></Hotel>,

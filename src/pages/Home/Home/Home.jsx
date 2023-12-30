@@ -5,6 +5,7 @@ import Featured from "../Featured/Featured";
 import PopularHotels from "../PopularHotels/PopularHotels";
 import Review from "../Reviews/Review";
 import Hotels from "../Hotels/Hotels";
+import Subscribe from "../../Shared/Subscribe/Subscribe";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
             <Featured></Featured>
             <Hotels></Hotels>
             <Review></Review>
+            <Subscribe></Subscribe>
         </div>
     );
 };
