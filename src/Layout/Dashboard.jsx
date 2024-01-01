@@ -99,9 +99,13 @@ const Dashboard = () => {
 
                                 <li className="font-semibold mt-5"><NavLink to="/dashboard/adminhome"><FaHome className="text-xl"></FaHome>Host Home</NavLink></li>
 
+                              
+
                                 <li className="font-semibold"><NavLink to="/dashboard/addhotels"><MdOutlineAddBusiness className="text-xl" />Add Hotel</NavLink></li>
 
                                 <li className="font-semibold"><NavLink to="/dashboard/addservice"><HiViewGridAdd className="text-xl" /> Add an Service</NavLink></li>
+
+                                <li className="font-semibold"><NavLink to="/dashboard/reqhost"><MdRequestPage className="text-xl" />Manage Host Requests</NavLink></li>
 
 
                                 <li className="font-semibold"><NavLink to="/dashboard/users"><FaUsers className="text-xl"></FaUsers>All Users</NavLink></li>

@@ -117,10 +117,9 @@ const DestinationBanner = ({ onSearchResults }) => {
         <div className="hero-overlay bg-opacity-50 text-white bg-black"></div>
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
-            <h1 className="text-xl sm:text-2xl pt-10 md:text-5xl  text-white font-bold">Hello Destination</h1>
+            <h1 className="text-xl sm:text-2xl pt-10 md:text-2xl  text-white font-bold">Mystical Marvels and Cultural Charms</h1>
             <p className="py-6 text-white">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti
-              eaque aut repudiandae et a id nisi.
+            Embark on a journey to Dhaka, the beating heart of Bangladesh, where centuries-old traditions coexist with modern dynamism. This bustling metropolis is a gateway to a land of mystical marvels and cultural charms, offering a tapestry of experiences that seamlessly blend history, spirituality, and contemporary vibrancy.
             </p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
