@@ -21,7 +21,7 @@ const ManageHotels = () => {
     return (
         <div className="p-10 mb-10">
             <h1 className="text-center font-bold text-2xl p-10">
-                Manage your hotels
+                Manage Hotels
             </h1>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">

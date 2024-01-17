@@ -172,7 +172,7 @@ const AddHotels = () => {
 
     return (
         <div className="w-full">
-            <SectionTitle subHeading="What's new" heading="Add an item"></SectionTitle>
+            <SectionTitle subHeading="What's new" heading="Add Hotel"></SectionTitle>
 
             <form className="px-10" onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">

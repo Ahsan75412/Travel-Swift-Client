@@ -51,7 +51,7 @@ console.log('i am from infomodal',user)
                             <div>
                                 <label className="label">
                                     <span className="label-text">
-                                        Studied at
+                                        Working at
                                     </span>
                                 </label>
                                 <input

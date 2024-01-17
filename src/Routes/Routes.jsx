@@ -37,6 +37,7 @@ import ManageServices from "../pages/Dashboard/Admin/ManageServices";
 import ManageHostRequests from "../pages/Dashboard/Admin/ManageHostRequests";
 import AddPackages from "../pages/Dashboard/Admin/AddPackages";
 import SubscribeMain from "../pages/Home/subscribe/SubscribeMain";
+import RequireAuth from "../pages/Account/RequireAuth";
 
 
 
@@ -53,35 +54,45 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-          path: "subscribe",
-          element: <SubscribeMain></SubscribeMain>,
+        path: "subscribe",
+        element: <SubscribeMain></SubscribeMain>,
       },
       {
         path: "hotels",
-        element: <Hotel></Hotel>,
+        element: <RequireAuth>
+          <Hotel></Hotel>
+        </RequireAuth>,
       },
-  
+
       {
         path: "destination",
         element: <Destination></Destination>,
       },
       {
         path: "flight",
-        element: <Flights></Flights>,
+        element: <RequireAuth>
+          <Flights></Flights>
+        </RequireAuth>,
       },
       {
         path: "rentalCars",
-        element: <Cars></Cars>,
+        element: <RequireAuth>
+          <Cars></Cars>
+        </RequireAuth>,
       },
       {
         path: "tourGuid",
-        element: <Guid></Guid>,
+        element: <RequireAuth>
+          <Guid></Guid>
+        </RequireAuth>,
       },
       {
         path: "allServices",
-        element: <AllServices></AllServices>,
+        element: <RequireAuth>
+          <AllServices></AllServices>
+        </RequireAuth>,
       },
-  
+
       {
         path: "serviceForm",
         element: <ServicesForm></ServicesForm>,
@@ -94,11 +105,13 @@ export const router = createBrowserRouter([
         path: "blog/:id",
         element: <BlogDetail></BlogDetail>,
       },
-  
-    
+
+
       {
         path: "hotel/:hotelId",
-        element: <HotelDetails></HotelDetails>,
+        element: <RequireAuth>
+          <HotelDetails></HotelDetails>
+        </RequireAuth>,
       },
       {
         path: "booking",
@@ -118,55 +131,58 @@ export const router = createBrowserRouter([
 
   },
 
-   // Dashboard Route different path 
-   {
+  // Dashboard Route different path 
+  {
     path: 'dashboard',
-    element: <Dashboard></Dashboard>,
+    element: <RequireAuth>
+      <Dashboard></Dashboard>
+    </RequireAuth>,
     children: [
       {
         path: 'adminhome',
         element: <Admin_Home></Admin_Home>,
 
       },
-   
+
       {
-        path:'addhotels',
+        path: 'addhotels',
         element: <AddHotels></AddHotels>
       },
       {
-        path:'addservice',
+        path: 'addservice',
         element: <AddServices></AddServices>
       },
       {
-        path:'packages',
+        path: 'packages',
         element: <AddPackages></AddPackages>
+        
       },
       {
-        path:'managehotel',
+        path: 'managehotel',
         element: <ManageHotels></ManageHotels>
       },
       {
-        path:'manageservices',
+        path: 'manageservices',
         element: <ManageServices></ManageServices>
       },
       {
-        path:'reqhost',
+        path: 'reqhost',
         element: <ManageHostRequests></ManageHostRequests>
       },
       {
-        path:'bookings',
+        path: 'bookings',
         element: <Bookings></Bookings>
       },
       {
-        path:'profile',
+        path: 'profile',
         element: <MyProfile></MyProfile>
       },
       {
-        path:'addBlog',
+        path: 'addBlog',
         element: <AddBlog></AddBlog>
       },
       {
-        path:'manages',
+        path: 'manages',
         element: <Manage></Manage>
       },
 
@@ -199,7 +215,7 @@ export const router = createBrowserRouter([
         path: 'addreview',
         element: <AddReview></AddReview>
       },
-    
+
 
       // {
       //   path: 'addItem',
@@ -213,5 +229,5 @@ export const router = createBrowserRouter([
 
     ]
   }
- 
+
 ]);

@@ -82,8 +82,8 @@ const MyProfile = () => {
                                         <p className="flex">
                                             
 
-                                            <FaGraduationCap />{" "}
-                                            Studied at &nbsp;{info.studyIn}
+                                            <FaGraduationCap className="pt-1"/>{" "}
+                                            Working at &nbsp;{info.studyIn}
                                         </p>
                                         <p className="flex">
                                             {/* <i class="fas fa-home"></i> */}

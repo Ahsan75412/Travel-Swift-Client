@@ -51,8 +51,9 @@ const NavBar = () => {
 
   const isHotelsActive = currentPath === '/hotels';
   const isDestinationActive = currentPath === '/destination';
+  const isServicesActive = currentPath === '/allServices';
 
-  const textColorClass = (isHotelsActive || isDestinationActive) ? 'text-white' : '';
+  const textColorClass = (isHotelsActive || isDestinationActive || isServicesActive) ? 'text-white' : '';
 
 
 

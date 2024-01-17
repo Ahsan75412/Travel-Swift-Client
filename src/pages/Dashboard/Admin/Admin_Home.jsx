@@ -45,7 +45,7 @@ const Admin_Home = () => {
         const chartData = allCategories.map(category => {
             const categoryOrders = allOrdersData.filter(order => order.category === category);
             const categoryServices = servicesData.filter(service => service.category === category);
-            
+
             const totalOrderAmount = categoryOrders.reduce((sum, order) => sum + order.price, 0);
             const totalServicesLength = categoryServices.length;
 
@@ -59,10 +59,10 @@ const Admin_Home = () => {
 
     // Stats data
     const stats = {
-        revenue: 1000,  
-        users: userData.length,  
-        services: servicesData.length, 
-        orders: allOrdersData.length,  
+        revenue: 1000,
+        users: userData.length,
+        services: servicesData.length,
+        orders: allOrdersData.length,
     };
 
     // Bar chart info here 
@@ -105,7 +105,7 @@ const Admin_Home = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div className="stat-title">Revenue</div>
-                    <div className="stat-value">${stats.revenue}</div>
+                    <div className="stat-value">৳{stats.revenue}</div>
                     <div className="stat-desc">Jan 1st - Feb 1st</div>
                 </div>
 
