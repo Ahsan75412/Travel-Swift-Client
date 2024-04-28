@@ -67,7 +67,7 @@ const ServicesForm = ({ item }) => {
         };
 
         axios
-            .post("http://localhost:5000/orders", formData)
+            .post("https://travel-tour-server-eight.vercel.app/orders", formData)
             .then((res) => {
                 if (res.data.insertedId) {
                     Swal.fire({

@@ -15,7 +15,7 @@ const CheckoutForm = ({ hotel }) => {
 
     useEffect(() => {
         fetch(
-            "http://localhost:5000/create-payment-intent",
+            "https://travel-tour-server-eight.vercel.app/create-payment-intent",
             {
                 method: "POST",
                 headers: {
@@ -82,7 +82,7 @@ const CheckoutForm = ({ hotel }) => {
             };
 
             fetch(
-                `http://localhost:5000/orders/${_id}`,
+                `https://travel-tour-server-eight.vercel.app/orders/${_id}`,
                 {
                     method: "PATCH",
                     headers: {

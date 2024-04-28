@@ -12,7 +12,7 @@ const Bookings = () => {
     const [status, setStatus] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5000/allOrders", {
+        fetch("https://travel-tour-server-eight.vercel.app/allOrders", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -29,7 +29,7 @@ const Bookings = () => {
     const handleDelete = (id) => {
         const warning = window.confirm("Are you sure you want to delete this order?");
         if (warning) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://travel-tour-server-eight.vercel.app/orders/${id}`;
             fetch(url, { method: "DELETE" })
                 .then((res) => res.json())
                 .then((data) => {
@@ -44,7 +44,7 @@ const Bookings = () => {
     const handleApprove = (id, index) => {
         const warning = window.confirm("Are you sure?");
         if (warning) {
-            fetch(`http://localhost:5000/orders/status/${id}`, { method: "PUT" })
+            fetch(`https://travel-tour-server-eight.vercel.app/orders/status/${id}`, { method: "PUT" })
                 .then((res) => res.json())
                 .then((data) => {
                     if (data.modifiedCount > 0) {

@@ -88,7 +88,7 @@ const BookingInfo = () => {
     //     data.status = "Pending";
 
     //         axios
-    //             .post("http://localhost:5000/orders", data)
+    //             .post("https://travel-tour-server-eight.vercel.app/orders", data)
     //             .then((res) => {
     //                 if (res.data.insertedId) {
     //                     alert("Room added to my order");
@@ -118,7 +118,7 @@ const BookingInfo = () => {
         // Add other form fields here
 
 
-        axios.post("http://localhost:5000/orders", data)
+        axios.post("https://travel-tour-server-eight.vercel.app/orders", data)
             .then((res) => {
                 if (res.data.insertedId) {
                     Swal.fire({

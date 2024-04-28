@@ -44,7 +44,7 @@ const AddPackages = () => {
                     };
                     axios
                         .post(
-                            "http://localhost:5000/package",
+                            "https://travel-tour-server-eight.vercel.app/package",
                             service,
                             {
                                 headers: {

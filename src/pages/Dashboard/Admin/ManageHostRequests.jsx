@@ -11,7 +11,7 @@ const ManageHostRequests = () => {
         isLoading,
         refetch,
     } = useQuery("hostRequests", () =>
-        fetch("http://localhost:5000/allHostReq").then((res) => res.json())
+        fetch("https://travel-tour-server-eight.vercel.app/allHostReq").then((res) => res.json())
     );
 
     if (isLoading) {

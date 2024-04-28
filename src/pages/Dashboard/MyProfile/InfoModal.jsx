@@ -14,7 +14,7 @@ const InfoModal = () => {
 
     const onSubmit = (data) => {
         axios
-            .post("http://localhost:5000/info", data)
+            .post("https://travel-tour-server-eight.vercel.app/info", data)
             .then((res) => {
                 if (res.data.insertedId) {
                     Swal.fire({

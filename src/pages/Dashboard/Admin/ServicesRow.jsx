@@ -17,7 +17,7 @@ const ServicesRow = ({ service, index, refetch }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/services/${id}`, {
+                fetch(`https://travel-tour-server-eight.vercel.app/services/${id}`, {
                     method: "DELETE",
                     headers: {
                         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -39,7 +39,7 @@ const ServicesRow = ({ service, index, refetch }) => {
             updatedPrice,
         };
 
-        fetch(`http://localhost:5000/services/${_id}`, {
+        fetch(`https://travel-tour-server-eight.vercel.app/services/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

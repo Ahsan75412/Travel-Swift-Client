@@ -10,7 +10,7 @@ const ManageServices = () => {
         isLoading,
         refetch,
     } = useQuery("services", () =>
-        fetch("http://localhost:5000/services", {
+        fetch("https://travel-tour-server-eight.vercel.app/services", {
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,
             },

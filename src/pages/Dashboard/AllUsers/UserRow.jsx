@@ -16,7 +16,7 @@ const UserRow = ({ user, refetch, index }) => {
 
 
     React.useEffect(() => {
-        fetch('http://localhost:5000/my-role', {
+        fetch('https://travel-tour-server-eight.vercel.app/my-role', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem(
@@ -38,7 +38,7 @@ const UserRow = ({ user, refetch, index }) => {
     //Make an Admin here
     const makeAdmin = () => {
         fetch(
-            `http://localhost:5000/user/admin/${email}`,
+            `https://travel-tour-server-eight.vercel.app/user/admin/${email}`,
             {
                 method: "PUT",
                 headers: {
@@ -67,7 +67,7 @@ const UserRow = ({ user, refetch, index }) => {
     // Make an hotel Host
     const makeHost = () => {
         fetch(
-            `http://localhost:5000/user/host/${email}`,
+            `https://travel-tour-server-eight.vercel.app/user/host/${email}`,
             {
                 method: "PUT",
                 headers: {
@@ -100,7 +100,7 @@ const UserRow = ({ user, refetch, index }) => {
             <th>{index + 1}</th>
             <td>{email}</td>
             <td>
-         
+
 
 
                 <button

@@ -15,7 +15,7 @@ const HostRequest = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         axios
-            .post("http://localhost:5000/host_request", data)
+            .post("https://travel-tour-server-eight.vercel.app/host_request", data)
             .then((res) => {
                 if (res.data.insertedId) {
                     Swal.fire({

@@ -11,7 +11,7 @@ const BlogDetail = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:5000/allBlog/${id}`)
+        fetch(`https://travel-tour-server-eight.vercel.app/allBlog/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setBlog(data);

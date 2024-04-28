@@ -18,7 +18,7 @@ const MyBooking = () => {
     useEffect(() => {
         if (user) {
             fetch(
-                `http://localhost:5000/allOrders?email=${user.email}`,
+                `https://travel-tour-server-eight.vercel.app/allOrders?email=${user.email}`,
                 {
                     method: "GET",
                     headers: {
@@ -53,7 +53,7 @@ const MyBooking = () => {
             "Are you sure\nYou want to delete this order..!?"
         );
         if (warning) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://travel-tour-server-eight.vercel.app/orders/${id}`;
             fetch(url, { method: "DELETE" })
                 .then((res) => res.json())
                 .then((data) => {

@@ -26,7 +26,7 @@ const HotelDetails = () => {
     // useEffect(() => {
     //     setLoading(true);
     //     fetch(
-    //         `http://localhost:5000/hotels/${hotelId}`
+    //         `https://travel-tour-server-eight.vercel.app/hotels/${hotelId}`
     //     )
     //         .then((res) => res.json())
     //         .then((data) => {
@@ -41,7 +41,7 @@ const HotelDetails = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch(`http://localhost:5000/hotels/${hotelId}`);
+                const response = await fetch(`https://travel-tour-server-eight.vercel.app/hotels/${hotelId}`);
                 const data = await response.json();
                 setHotel(data);
                 setQuantity(data.availableQty);

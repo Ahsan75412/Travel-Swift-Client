@@ -18,7 +18,7 @@ const MyProfile = () => {
     useEffect(() => {
         if (user) {
             fetch(
-                `http://localhost:5000/info?email=${user.email}`,
+                `https://travel-tour-server-eight.vercel.app/info?email=${user.email}`,
                 {
                     method: "GET",
                 }

@@ -81,7 +81,7 @@ const AddHotels = () => {
     //         };
 
     //         // Post the data to your server
-    //         const response = await axios.post('http://localhost:5000/hotels', newItem);
+    //         const response = await axios.post('https://travel-tour-server-eight.vercel.app/hotels', newItem);
 
     //         if (response.data.insertedId) {
     //             reset();
@@ -151,7 +151,7 @@ const AddHotels = () => {
             };
 
             // Post the data to your server
-            const response = await axios.post('http://localhost:5000/hotels', newItem);
+            const response = await axios.post('https://travel-tour-server-eight.vercel.app/hotels', newItem);
 
             if (response.data.insertedId) {
                 reset();

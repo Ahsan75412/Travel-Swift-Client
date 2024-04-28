@@ -8,7 +8,7 @@ const Users = () => {
         isLoading,
         refetch,
     } = useQuery("users", () =>
-        fetch("http://localhost:5000/user", {
+        fetch("https://travel-tour-server-eight.vercel.app/user", {
             method: "GET",
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,

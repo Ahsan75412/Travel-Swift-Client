@@ -11,7 +11,7 @@ const Admin_Home = () => {
     const { data: userData = [] } = useQuery({
         queryKey: ['/user'],
         queryFn: async () => {
-            const response = await fetch('http://localhost:5000/user');
+            const response = await fetch('https://travel-tour-server-eight.vercel.app/user');
             return response.json();
         }
     });
@@ -20,7 +20,7 @@ const Admin_Home = () => {
     const { data: allOrdersData = [] } = useQuery({
         queryKey: ['/allOrders'],
         queryFn: async () => {
-            const response = await fetch('http://localhost:5000/allOrders');
+            const response = await fetch('https://travel-tour-server-eight.vercel.app/allOrders');
             return response.json();
         }
     });
@@ -29,7 +29,7 @@ const Admin_Home = () => {
     const { data: servicesData = [] } = useQuery({
         queryKey: ['/services'],
         queryFn: async () => {
-            const response = await fetch('http://localhost:5000/services');
+            const response = await fetch('https://travel-tour-server-eight.vercel.app/services');
             return response.json();
         }
     });

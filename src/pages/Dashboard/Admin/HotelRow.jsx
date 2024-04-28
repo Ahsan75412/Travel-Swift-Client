@@ -29,7 +29,7 @@ const HotelRow = ({ hotel, index, refetch }) => {
 
 
                 console.log(id)
-                fetch(`http://localhost:5000/hotels/${id}`, {
+                fetch(`https://travel-tour-server-eight.vercel.app/hotels/${id}`, {
                     method: "DELETE",
                     headers: {
                         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -57,7 +57,7 @@ const HotelRow = ({ hotel, index, refetch }) => {
             updatedPrice,
         };
 
-        fetch(`http://localhost:5000/hotels/${_id}`, {
+        fetch(`https://travel-tour-server-eight.vercel.app/hotels/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

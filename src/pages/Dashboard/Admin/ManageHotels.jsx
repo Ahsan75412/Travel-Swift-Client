@@ -9,7 +9,7 @@ const ManageHotels = () => {
         isLoading,
         refetch,
     } = useQuery("hotels", () =>
-        fetch("http://localhost:5000/hotels", {
+        fetch("https://travel-tour-server-eight.vercel.app/hotels", {
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,
             },

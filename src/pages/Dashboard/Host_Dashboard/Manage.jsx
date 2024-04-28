@@ -20,7 +20,7 @@ const Manage = () => {
             if (user) {
                 try {
                     const response = await fetch(
-                        `http://localhost:5000/hotels?email=${user.email}`,
+                        `https://travel-tour-server-eight.vercel.app/hotels?email=${user.email}`,
                         {
                             method: 'GET',
                             headers: {

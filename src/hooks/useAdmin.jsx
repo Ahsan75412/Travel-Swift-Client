@@ -8,7 +8,7 @@ const useAdmin = (user) => {
         const email = user?.email;
         if (email) {
             // https://limitless-thicket-02169.herokuapp.com
-            const url = `http://localhost:5000/admin/${email}`;
+            const url = `https://travel-tour-server-eight.vercel.app/admin/${email}`;
             fetch(url, {
                 method: "GET",
                 headers: {

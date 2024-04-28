@@ -15,7 +15,7 @@ const stripePromise = loadStripe(
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://travel-tour-server-eight.vercel.app/orders/${id}`;
 
     const { data: hotel, isLoading } = useQuery(["orders", id], () =>
         fetch(url, {

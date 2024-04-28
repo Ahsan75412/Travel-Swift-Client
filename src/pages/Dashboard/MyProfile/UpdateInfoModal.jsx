@@ -30,7 +30,7 @@ const UpdateInfoModal = () => {
 
         };
         fetch(
-            `http://localhost:5000/info?email=${user.email}`,
+            `https://travel-tour-server-eight.vercel.app/info?email=${user.email}`,
             {
                 method: "PUT",
                 headers: {

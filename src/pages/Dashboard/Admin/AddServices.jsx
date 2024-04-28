@@ -49,7 +49,7 @@ const AddServices = () => {
                     };
                     axios
                         .post(
-                            "http://localhost:5000/services",
+                            "https://travel-tour-server-eight.vercel.app/services",
                             service,
                             {
                                 headers: {

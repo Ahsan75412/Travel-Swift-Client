@@ -68,7 +68,7 @@ const AddBlog = () => {
                     };
                     axios
                         .post(
-                            "http://localhost:5000/add_blog", blog,
+                            "https://travel-tour-server-eight.vercel.app/add_blog", blog,
                             {
                                 headers: {
                                     authorization: `Bearer ${localStorage.getItem(

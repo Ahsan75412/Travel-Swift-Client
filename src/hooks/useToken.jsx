@@ -9,7 +9,7 @@ const useToken = (user) => {
 
         if (email) {
             fetch(
-                `http://localhost:5000/user/${email}`,
+                `https://travel-tour-server-eight.vercel.app/user/${email}`,
                 {
                     method: "PUT",
                     headers: {

@@ -17,15 +17,15 @@
 
 //     const handleSearch = async () => {
 //         try {
-//             //   const response = await axios.get(`http://localhost:5000/hotels?name=${name}&destination=${location}`);
+//             //   const response = await axios.get(`https://travel-tour-server-eight.vercel.app/hotels?name=${name}&destination=${location}`);
 //             let response = null;
 
 //             if (location) {
-//                 response = await axios.get(`http://localhost:5000/hotels?search=${location}&type=location`);
+//                 response = await axios.get(`https://travel-tour-server-eight.vercel.app/hotels?search=${location}&type=location`);
 //             }
 
 //             if (name) {
-//                 response = await axios.get(`http://localhost:5000/hotels?search=${name}&type=name`);
+//                 response = await axios.get(`https://travel-tour-server-eight.vercel.app/hotels?search=${name}&type=name`);
 //             }
 
 //             const searchData = response.data;
@@ -97,9 +97,9 @@ const DestinationBanner = ({ onSearchResults }) => {
       let response = null;
 
       if (searchType === 'location') {
-        response = await axios.get(`http://localhost:5000/hotels?search=${searchTerm}&type=location`);
+        response = await axios.get(`https://travel-tour-server-eight.vercel.app/hotels?search=${searchTerm}&type=location`);
       } else if (searchType === 'name') {
-        response = await axios.get(`http://localhost:5000/hotels?search=${searchTerm}&type=name`);
+        response = await axios.get(`https://travel-tour-server-eight.vercel.app/hotels?search=${searchTerm}&type=name`);
       }
 
       const searchData = response.data;

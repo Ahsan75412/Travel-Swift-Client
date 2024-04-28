@@ -10,7 +10,7 @@ const Subscribe = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/subscribe', {
+      const response = await fetch('https://travel-tour-server-eight.vercel.app/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

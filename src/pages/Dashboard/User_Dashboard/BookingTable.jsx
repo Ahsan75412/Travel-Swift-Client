@@ -11,7 +11,7 @@ const BookingTable = () => {
     useEffect(() => {
         if (user) {
             fetch(
-                `http://localhost:5000/allOrders?email=${user.email}`,
+                `https://travel-tour-server-eight.vercel.app/allOrders?email=${user.email}`,
                 {
                     method: "GET",
                     headers: {

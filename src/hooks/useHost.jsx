@@ -7,7 +7,7 @@ const useHost = (user) => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            const url = `http://localhost:5000/host/${email}`;
+            const url = `https://travel-tour-server-eight.vercel.app/host/${email}`;
             fetch(url, {
                 method: "GET",
                 headers: {
