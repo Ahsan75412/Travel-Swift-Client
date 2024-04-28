@@ -104,7 +104,7 @@ const HotelRow = ({ hotel, index, refetch }) => {
                 </div>
             </td>
             <td>
-            {(name || '').slice(0, 20)}
+                {(name || '').slice(0, 20)}
                 <br />
                 <span className="badge badge-ghost badge-sm">{category}</span>
             </td>
@@ -141,7 +141,7 @@ const HotelRow = ({ hotel, index, refetch }) => {
                                 className="modal-toggle"
                             />
 
-                       
+
 
                             <div className="modal modal-bottom sm:modal-middle">
                                 <div className="modal-box px-10 pt-14">

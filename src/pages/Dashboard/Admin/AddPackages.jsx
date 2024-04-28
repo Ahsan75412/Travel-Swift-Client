@@ -94,7 +94,7 @@ const AddPackages = () => {
                                 <option>VIP</option>
                                 <option>Festival</option>
                                 <option>Self</option>
-    
+
                             </select>
                         </div>
 
@@ -139,7 +139,7 @@ const AddPackages = () => {
                         </div>
 
 
-             
+
 
 
                         <div className="form-control w-full max-w-xs">

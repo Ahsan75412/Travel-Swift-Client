@@ -11,7 +11,7 @@ const BookingTable = () => {
     useEffect(() => {
         if (user) {
             fetch(
-                `http://localhost:5000/orders?email=${user.email}`,
+                `http://localhost:5000/allOrders?email=${user.email}`,
                 {
                     method: "GET",
                     headers: {
@@ -46,8 +46,8 @@ const BookingTable = () => {
                             <tr>
                                 <th>No.</th>
                                 <th>Name</th>
-                                <th>Product Name</th>
-                                <th>Quantity</th>
+                                <th>Service Name</th>
+                                <th>Service Quantity</th>
                                 <th>Price</th>
                                 <th>Payment</th>
                                 <th>Status</th>

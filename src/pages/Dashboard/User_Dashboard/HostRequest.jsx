@@ -67,15 +67,15 @@ const HostRequest = () => {
                         <br />
 
                         <div className="form-control w-full ">
-                       
-                        <select defaultValue="Pick One" {...register("category", { required: true })} className="select select-bordered ">
-                            <option disabled >Pick One</option>
-                            <option>Host</option>
-                      
-                        </select>
 
-                    </div>
-                    
+                            <select defaultValue="Pick One" {...register("category", { required: true })} className="select select-bordered ">
+                                <option disabled >Pick One</option>
+                                <option>Host</option>
+
+                            </select>
+
+                        </div>
+
                         <textarea
                             {...register("description")}
                             placeholder="Your Traveling Business details...."

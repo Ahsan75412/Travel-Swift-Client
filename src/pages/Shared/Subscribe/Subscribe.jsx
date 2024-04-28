@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 
 const Subscribe = () => {
-  const [email, setEmail ] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
@@ -19,13 +19,13 @@ const Subscribe = () => {
       });
 
       if (response.ok) {
- 
+
         Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Subscribe added Successfully!',
-            showConfirmButton: false,
-            timer: 1500,
+          position: 'top-end',
+          icon: 'success',
+          title: 'Subscribe added Successfully!',
+          showConfirmButton: false,
+          timer: 1500,
         });
         console.log('Subscription successful!');
         // You can update the UI or show a success message here

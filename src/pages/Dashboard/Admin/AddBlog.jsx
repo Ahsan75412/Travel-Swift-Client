@@ -31,13 +31,13 @@ const AddBlog = () => {
     const [user] = useAuthState(auth);
 
     const {
-         register,
-         handleSubmit, 
-         reset, 
-         formState: { errors } } = useForm();
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors } } = useForm();
 
 
-         const blog_image_token = import.meta.env.VITE_Image_Upload_token;
+    const blog_image_token = import.meta.env.VITE_Image_Upload_token;
 
 
 
@@ -68,7 +68,7 @@ const AddBlog = () => {
                     };
                     axios
                         .post(
-                            "http://localhost:5000/add_blog",blog,
+                            "http://localhost:5000/add_blog", blog,
                             {
                                 headers: {
                                     authorization: `Bearer ${localStorage.getItem(

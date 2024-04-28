@@ -35,10 +35,10 @@ const Blog = () => {
                         <p className='uppercase font-semibold text-[#FF9466] pb-5'> Embark on this historical odyssey </p>
 
                         <h1 className="md:text-4xl text-3xl font-bold text-gray-800">
-                        Nature's Symphony with Historical Overtones
+                            Nature's Symphony with Historical Overtones
                         </h1>
                         <p className="py-6 font-semibold text-gray-500">
-                        Bangladesh, a land steeped in history and cultural heritage, boasts a plethora of historical sites that tell the tale of a vibrant and diverse past. Join us on a captivating journey through some of the most significant historical sites that showcase Bangladesh's fascinating heritage.
+                            Bangladesh, a land steeped in history and cultural heritage, boasts a plethora of historical sites that tell the tale of a vibrant and diverse past. Join us on a captivating journey through some of the most significant historical sites that showcase Bangladesh's fascinating heritage.
                         </p>
 
                         <Link

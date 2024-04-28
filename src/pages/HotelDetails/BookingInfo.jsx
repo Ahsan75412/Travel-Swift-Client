@@ -139,8 +139,8 @@ const BookingInfo = () => {
     };
 
 
- 
-    
+
+
 
 
     const debounce = (func, wait) => {
@@ -273,7 +273,7 @@ const BookingInfo = () => {
                                     {...register("date")}
                                     type="text"
                                     placeholder="Your Selection Date"
-                                  
+
 
 
                                     value={`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(

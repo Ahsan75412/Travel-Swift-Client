@@ -40,7 +40,7 @@ const Review = () => {
                         key={review._id}
 
                     >
-                    
+
 
                         <div className=" flex flex-col items-center md:my-16 mx-12 sm:mx-16 md:mx-22 ">
                             <Rating

@@ -1,10 +1,7 @@
 // import { type } from "@testing-library/user-event/dist/type";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import auth from "../../../firebaseConfig";
-import useAdmin from "../../../hooks/useAdmin";
-import useHost from "../../../hooks/useHost";
-import { useAuthState } from 'react-firebase-hooks/auth';
+
 
 
 
@@ -13,13 +10,10 @@ const UserRow = ({ user, refetch, index }) => {
 
 
     const { email, role } = user;
-    // const [loggedInUser] = useAuthState(auth);
+
 
     const [myRole, setMyRole] = useState('');
 
-    // console.log('piku -> ', loggedInUser)
-    // const [admin] = useAdmin(loggedInUser);
-    // const [host] = useHost(loggedInUser);
 
     React.useEffect(() => {
         fetch('http://localhost:5000/my-role', {
@@ -106,41 +100,7 @@ const UserRow = ({ user, refetch, index }) => {
             <th>{index + 1}</th>
             <td>{email}</td>
             <td>
-                {/* {role !== "admin" && (
-                    <button
-                        onClick={makeAdmin}
-                        className="btn btn-outline btn-sm btn-success mx-5"
-                    >
-                        Make Admin
-                    </button>
-                )}
-
-
-
-                {role !== "host" && (
-                    <button
-                        onClick={makeHost}
-                        className="btn btn-outline btn-sm btn-success"
-                    >
-                        Make Host
-                    </button>
-                )} */}
-
-                {/* <button
-                    onClick={makeAdmin}
-                    className="btn btn-outline btn-sm btn-success mx-5"
-                    disabled={role === "admin" || host}
-                >
-                    Make Admin
-                </button>
-
-                <button
-                    onClick={makeHost}
-                    className="btn btn-outline btn-sm btn-success"
-                    disabled={role === "host" || admin}
-                >
-                    Make Host
-                </button> */}
+         
 
 
                 <button
@@ -160,42 +120,6 @@ const UserRow = ({ user, refetch, index }) => {
                 >
                     Make Host
                 </button>
-
-
-
-
-
-
-
-
-
-
-
-
-                {/* <button
-                    onClick={makeAdmin}
-                    className="btn btn-outline btn-sm btn-success mx-5"
-                    disabled={role === "host" || host}
-                >
-                    Make Admin
-                </button>
-
-                <button
-                    onClick={makeHost}
-                    className="btn btn-outline btn-sm btn-success"
-                    disabled={admin}
-                >
-                    Make Host
-                </button> */}
-
-
-
-
-
-
-
-
-
 
 
             </td>

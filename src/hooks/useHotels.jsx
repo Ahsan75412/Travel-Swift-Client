@@ -15,7 +15,7 @@ const useHotels = () => {
 
     }, [])
 
-    return [hotel , loading]
+    return [hotel, loading]
 
 }
 

@@ -18,7 +18,7 @@ const MyBooking = () => {
     useEffect(() => {
         if (user) {
             fetch(
-                `http://localhost:5000/orders?email=${user.email}`,
+                `http://localhost:5000/allOrders?email=${user.email}`,
                 {
                     method: "GET",
                     headers: {
@@ -59,7 +59,7 @@ const MyBooking = () => {
                 .then((data) => {
                     if (data.deletedCount > 0) {
                         const remaining = MyBooking.filter(
-                            (order) => order._id !== id 
+                            (order) => order._id !== id
                         );
                         setMyBooking(remaining);
                     }
@@ -71,10 +71,10 @@ const MyBooking = () => {
     }
 
 
-    
+
     return (
         <div>
-            {/* <h1>my order</h1> */}
+            <h1 className="text-center text-3xl pt-10 text-yellow-600">My order: {MyBooking.length}</h1>
             {MyBooking.map((order) => (
                 <OrderCard key={order._id} hotel={order}>
                     {order.paid ? (

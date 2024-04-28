@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import InfoModal from "./InfoModal";
 import UpdateInfoModal from "./UpdateInfoModal";
 import auth from "../../../firebaseConfig";
-import {FaGraduationCap} from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 
@@ -56,7 +56,7 @@ const MyProfile = () => {
                                 target="_blank"
                                 href="https://www.facebook.com/"
                             >
-                               
+
                                 <button className="fab fa-facebook btn btn-secondary text-white btn-xs"></button>
                             </a>
                             <a
@@ -80,9 +80,9 @@ const MyProfile = () => {
                                     </h2>
                                     <div className="text-left font-bold space-y-3">
                                         <p className="flex">
-                                            
 
-                                            <FaGraduationCap className="pt-1"/>{" "}
+
+                                            <FaGraduationCap className="pt-1" />{" "}
                                             Working at &nbsp;{info.studyIn}
                                         </p>
                                         <p className="flex">

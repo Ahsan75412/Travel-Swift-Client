@@ -11,8 +11,8 @@ import { DateRange } from "react-date-range";
 
 
 
-const ServicesForm = ({ item}) => {
-console.log(item.name)
+const ServicesForm = ({ item }) => {
+    console.log(item.name)
     const [openDate, setOpenDate] = useState(false);
 
 
@@ -48,7 +48,7 @@ console.log(item.name)
         event.preventDefault();
 
         // Extracting values from data
-        const { name, email, location, address, phone, numTravelers,img , bookingDate } = data;
+        const { name, email, location, address, phone, numTravelers, img, bookingDate } = data;
 
         // Use the updated total price from state
         const formData = {
@@ -153,34 +153,34 @@ console.log(item.name)
 
 
                         <div className="form-control w-full ">
-                        <label className="label">
-                            <span className="label-text font-semibold">*Booking Date</span>
-                        </label>
-                        <>
+                            <label className="label">
+                                <span className="label-text font-semibold">*Booking Date</span>
+                            </label>
+                            <>
 
-                            {openDate && (
-                                <DateRange
-                                    editableDateInputs={true}
-                                    onChange={(item) => setDate([item.selection])}
-                                    moveRangeOnFirstSelection={false}
-                                    ranges={date}
-                                    className="date"
-                                    minDate={new Date()}
-                                />
-                            )}
-                        </>
-                        <input
-                            onClick={() => setOpenDate(!openDate)}
-                            type="text"
-                            {...register("bookingDate", { required: true })}
-                            // value={`${date[0].startDate.toISOString()} to ${date[0].endDate.toISOString()}`}
-                            value={`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(
-                                date[0].endDate,
-                                "dd/MM/yyyy"
-                            )}`}
-                            className="input input-bordered input-warning w-full "
-                        />
-                    </div>
+                                {openDate && (
+                                    <DateRange
+                                        editableDateInputs={true}
+                                        onChange={(item) => setDate([item.selection])}
+                                        moveRangeOnFirstSelection={false}
+                                        ranges={date}
+                                        className="date"
+                                        minDate={new Date()}
+                                    />
+                                )}
+                            </>
+                            <input
+                                onClick={() => setOpenDate(!openDate)}
+                                type="text"
+                                {...register("bookingDate", { required: true })}
+                                // value={`${date[0].startDate.toISOString()} to ${date[0].endDate.toISOString()}`}
+                                value={`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(
+                                    date[0].endDate,
+                                    "dd/MM/yyyy"
+                                )}`}
+                                className="input input-bordered input-warning w-full "
+                            />
+                        </div>
 
 
                         <div>

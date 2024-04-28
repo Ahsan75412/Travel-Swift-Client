@@ -33,7 +33,7 @@ const BlogDetail = () => {
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">{blog.name}</h2>
-                        <div  className='flex '>
+                        <div className='flex '>
                             <IoLocationOutline className='text-[#FF9466]' />
                             <p className='-mt-1 '> {blog.location}</p>
                         </div>

@@ -19,7 +19,7 @@ const UpdateInfoModal = () => {
         const updatedPhone = data.phone;
         const updatedFacebook = data.facebook;
         const updatedTweeter = data.Tweeter;
-    
+
 
         const bodyData = {
             updatedLivesIn,
@@ -27,7 +27,7 @@ const UpdateInfoModal = () => {
             updatedPhone,
             updatedFacebook,
             updatedTweeter,
-           
+
         };
         fetch(
             `http://localhost:5000/info?email=${user.email}`,
@@ -48,21 +48,21 @@ const UpdateInfoModal = () => {
                         updatedNPhone,
                         updatedNFacebook,
                         updatedNTweeter,
-                    
+
                     } = {
                         ...lives,
                         ...study,
                         ...phn,
                         ...tweeter,
                         ...fb,
-                        
+
                     };
                     setLives(updatedNLivesIn);
                     setStudy(updatedNStudyIn);
                     setPhn(updatedNPhone);
                     setTweeter(updatedNTweeter);
                     setFb(updatedNFacebook);
-                    
+
                     reset();
                     Swal.fire({
                         position: "top-end",
@@ -165,7 +165,7 @@ const UpdateInfoModal = () => {
                                     className="input input-bordered input-warning w-full "
                                 />
                             </div>
-                      
+
 
                             <div className="modal-action justify-evenly">
                                 <label

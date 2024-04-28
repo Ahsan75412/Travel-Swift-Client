@@ -10,7 +10,7 @@ import Swal from 'sweetalert2'
 const InfoModal = () => {
     const { register, handleSubmit, reset } = useForm();
     const [user] = useAuthState(auth);
-console.log('i am from infomodal',user)
+    console.log('i am from infomodal', user)
 
     const onSubmit = (data) => {
         axios
@@ -57,7 +57,7 @@ console.log('i am from infomodal',user)
                                 <input
                                     {...register("studyIn")}
                                     type="text"
-                                    placeholder="Studied at"
+                                    placeholder="working at"
                                     className="input input-bordered input-warning w-full "
                                 />
                             </div>

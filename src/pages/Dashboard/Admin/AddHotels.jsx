@@ -104,39 +104,39 @@ const AddHotels = () => {
             console.log('p00 -> ', data.image);
             const files = data.image;
             const uploaded = [];
-    
+
             // Create an array of Promises for each image upload
             // const uploadPromises = files.map(async (file) => {
             //     const formData = new FormData();
             //     formData.append('image', file);
-    
+
             for (let i = 0; i < files.length; i++) {
                 const file = files[i];
                 let url = '';
 
                 const formData = new FormData();
                 formData.append('image', file);
-    
+
                 const imgResponse = await fetch(img_hosting_url, {
                     method: 'POST',
                     body: formData,
                 });
-    
+
                 const imgData = await imgResponse.json();
-    
+
                 if (imgData.success) {
                     const url = imgData.data?.medium?.url || imgData.data?.url;
                     uploaded.push(url);
                 } else {
                     throw new Error('Image upload failed');
                 }
-            
-    
-            // Wait for all image uploads to complete
-            // await Promise.all(uploadPromises);
+
+
+                // Wait for all image uploads to complete
+                // await Promise.all(uploadPromises);
             }
             // Once all images are uploaded, proceed with the rest of the data
-            const { name,email, phone, location, description, price, category, availableQty, availableDate } = data;
+            const { name, email, phone, location, description, price, category, availableQty, availableDate } = data;
             const newItem = {
                 name,
                 email,
@@ -149,10 +149,10 @@ const AddHotels = () => {
                 availableDate,
                 image: uploaded,
             };
-    
+
             // Post the data to your server
             const response = await axios.post('http://localhost:5000/hotels', newItem);
-    
+
             if (response.data.insertedId) {
                 reset();
                 Swal.fire({
@@ -167,7 +167,7 @@ const AddHotels = () => {
             console.error('Error:', error);
         }
     };
-    
+
 
 
     return (
@@ -194,7 +194,7 @@ const AddHotels = () => {
                         {...register("email", { required: true, maxLength: 120 })}
                         className="input input-bordered w-full "
                         value={user?.email || ""}
-                        />
+                    />
 
                 </div>
 

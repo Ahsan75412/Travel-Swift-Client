@@ -15,7 +15,7 @@ const useServices = () => {
 
     }, [])
 
-    return [services , loading]
+    return [services, loading]
 
 }
 
